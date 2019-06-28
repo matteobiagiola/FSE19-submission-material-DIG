@@ -1,0 +1,35 @@
+digraph G {
+  HomeContainerPage;
+  MenuPage;
+  RetrospectiveContainerPage;
+  LoginContainerPage;
+  HomeContainerPage -> RetrospectiveContainerPage [ label="createNewSessionHomeContainerPage()" ];
+  HomeContainerPage -> RetrospectiveContainerPage [ label="goToBoardHomeContainerPage(boardName)" ];
+  HomeContainerPage -> HomeContainerPage [ label="goToHomeHomeContainerPage()" ];
+  HomeContainerPage -> HomeContainerPage [ label="goToPreviousViewHomeContainerPage()" ];
+  HomeContainerPage -> LoginContainerPage [ label="logoutHomeContainerPage()" ];
+  MenuPage -> HomeContainerPage [ label="leaveSessionMenuPage()" ];
+  MenuPage -> LoginContainerPage [ label="logoutMenuPage()" ];
+  MenuPage -> RetrospectiveContainerPage [ label="toggleSummaryModeMenuPage()" ];
+  MenuPage -> RetrospectiveContainerPage [ label="untoggleSummaryModeMenuPage()" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="changeIdeasPostContentRetrospectiveContainerPage(id,ideasPost)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="changeNotWentWellPostContentRetrospectiveContainerPage(id,notWentWellPost)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="changeWentWellPostContentRetrospectiveContainerPage(id,wentWellPost)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="createIdeasPostRetrospectiveContainerPage(ideasPost)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="createNotWentWellPostRetrospectiveContainerPage(notWentWellPost)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="createWentWellPostRetrospectiveContainerPage(wentWellPost)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="deleteIdeasPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="deleteNotWentWellPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="deleteWentWellPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="dislikeIdeasPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="dislikeNotWentWellPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="dislikeWentWellPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> HomeContainerPage [ label="goToHomeRetrospectiveContainerPage()" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="likeIdeasPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="likeNotWentWellPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="likeWentWellPostRetrospectiveContainerPage(id)" ];
+  RetrospectiveContainerPage -> MenuPage [ label="openMenuRetrospectiveContainerPage()" ];
+  RetrospectiveContainerPage -> RetrospectiveContainerPage [ label="renameBoardRetrospectiveContainerPage(newBoardName)" ];
+  LoginContainerPage -> HomeContainerPage [ label="loginLoginContainerPage(peopleName)" ];
+  LoginContainerPage -> RetrospectiveContainerPage [ label="loginLoginContainerPage(peopleName)" ];
+}

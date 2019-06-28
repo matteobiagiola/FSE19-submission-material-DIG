@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.evosuite</groupId>
+        <artifactId>evosuite</artifactId>
+        <version>1.0.4-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>evosuite-master</artifactId>
+    <packaging>jar</packaging>
+
+    <!-- dependency versions are inherited from parent pom -->
+    <dependencies>
+
+        <!-- EvoSuite Modules -->
+
+        <dependency>
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite-runtime</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+<!--        <dependency>
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite-standalone-runtime</artifactId>
+            <version>${project.version}</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        -->
+        <dependency> <!--  FIXME this is temporary -->
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite-client</artifactId>
+            <version>${project.version}</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+        <!-- External Libraries -->
+
+        <!-- Java EE dependencies.
+
+             Here, they need to be part of the EvoSuite executable.
+             However, in "runtime" module they should be as "provided".
+             Ie, the runtime jar should not contain those libraries, as to
+             avoid conflicts with the configuration of the SUT
+          -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.servlet</groupId>
+            <artifactId>jboss-servlet-api_3.1_spec</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>xjc</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <schemaDirectory>${project.basedir}/src/main/resources/xsd</schemaDirectory>
+                    <packageName>org.evosuite.xsd</packageName>
+                </configuration>
+            </plugin>
+
+
+            <!-- be sure classes get shaded -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+		<configuration>
+		  <artifactSet>
+                    <excludes>
+                      <!-- the eclipse plugin needs this -->
+                      <exclude>*:xml-apis</exclude>
+                    </excludes>
+                  </artifactSet>
+		</configuration>
+            </plugin>
+
+            <!-- create single jar with also shaded classes, eg ASM -->
+            <!-- Need to activate the Java Agent in the manifest of the jar-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <inherited>true</inherited>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        </manifest>
+                        <manifestEntries>
+                            <Main-Class>org.evosuite.EvoSuite</Main-Class>
+                            <Premain-Class>org.evosuite.runtime.agent.InstrumentingAgent</Premain-Class>
+                            <Agent-Class>org.evosuite.runtime.agent.InstrumentingAgent</Agent-Class>
+                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
+                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
+
+            <!-- Force all tests in Master to be run as Integration Tests after the "package" Maven phase.
+                 This is to avoid issues with Java Agent that requires a built jar -->
+            <!-- //FIXME: tmp disable to understand what the hack is happening on Jenkins
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18</version>
+                <configuration>
+                    <skipTests>${skipTests}</skipTests>
+                    <forkCount>1</forkCount>
+                    <reuseForks>false</reuseForks>
+                    <reportFormat>xml</reportFormat>
+                    <excludes>
+                        <exclude>**/Test*.java</exclude>
+                        <exclude>**/*Test.java</exclude>
+                        <exclude>**/*TestCase.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.18</version>
+                <configuration>
+                    <includes>
+                        <include>**/*IT.java</include>
+                        <include>**/Test*.java</include>
+                        <include>**/*Test.java</include>
+                        <include>**/*TestCase.java</include>
+                    </includes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>failsafe-integration-tests</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>integration-test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+    -->
+            
+            <!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.evosuite.EvoSuite</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <Premain-Class>org.evosuite.runtime.agent.InstrumentingAgent</Premain-Class>
+                            <Agent-Class>org.evosuite.runtime.agent.InstrumentingAgent</Agent-Class>
+                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
+                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
+                        </manifestEntries>
+                    </archive>
+                    <descriptors>
+                        <descriptor>src/main/assembly/jar-minimal.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
+        </plugins>
+    </build>
+
+</project>
+	

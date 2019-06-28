@@ -1,0 +1,34 @@
+digraph G {
+  NewBoardPage;
+  CardDetailsPage;
+  HomePage;
+  BoardPage;
+  OwnedBoardsPage;
+  IndexPage;
+  SignUpPage;
+  InsertCardPage;
+  NewBoardPage -> HomePage [ label="goToHomePageNewBoardPage()" ];
+  NewBoardPage -> BoardPage [ label="new_board_formNewBoardPage(boardName)" ];
+  CardDetailsPage -> BoardPage [ label="deleteCardCardDetailsPage()" ];
+  CardDetailsPage -> BoardPage [ label="goToBoardPageCardDetailsPage()" ];
+  CardDetailsPage -> CardDetailsPage [ label="save_commentCardDetailsPage(cardComment)" ];
+  HomePage -> OwnedBoardsPage [ label="goToBoardUsingNavbarHomePage(boardName)" ];
+  HomePage -> IndexPage [ label="goToIndexHomePage()" ];
+  HomePage -> NewBoardPage [ label="goToNewBoardPageHomePage()" ];
+  HomePage -> OwnedBoardsPage [ label="seeAvailableBoardsHomePage()" ];
+  BoardPage -> BoardPage [ label="add_new_listBoardPage(listName)" ];
+  BoardPage -> OwnedBoardsPage [ label="goToBoardUsingNavbarBoardPage(boardName)" ];
+  BoardPage -> CardDetailsPage [ label="goToCardDetailsPageBoardPage(listName,cardId)" ];
+  BoardPage -> InsertCardPage [ label="goToInsertCardPageBoardPage(listName)" ];
+  OwnedBoardsPage -> BoardPage [ label="goToBoardPageOwnedBoardsPage()" ];
+  OwnedBoardsPage -> HomePage [ label="goToHomePageOwnedBoardsPage()" ];
+  IndexPage -> HomePage [ label="goToHomePageIndexPage()" ];
+  IndexPage -> SignUpPage [ label="goToSignUpIndexPage()" ];
+  IndexPage -> IndexPage [ label="sign_in_formIndexPage(email,password)" ];
+  IndexPage -> HomePage [ label="sign_in_formIndexPage(email,password)" ];
+  SignUpPage -> IndexPage [ label="goToIndexSignUpPage()" ];
+  SignUpPage -> SignUpPage [ label="sign_up_formSignUpPage(firstName,lastName,email,password,passwordConfirmation)" ];
+  SignUpPage -> HomePage [ label="sign_up_formSignUpPage(firstName,lastName,email,password,passwordConfirmation)" ];
+  InsertCardPage -> BoardPage [ label="goToBoardPageInsertCardPage()" ];
+  InsertCardPage -> BoardPage [ label="new_card_formInsertCardPage(cardText)" ];
+}

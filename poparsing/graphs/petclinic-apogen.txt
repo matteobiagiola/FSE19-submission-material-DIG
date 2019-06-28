@@ -1,0 +1,31 @@
+digraph G {
+  VetsPage;
+  NewPetPage;
+  VisitsPage;
+  OwnersPage;
+  OwnerInformationPage;
+  IndexPage;
+  NewOwnerPage;
+  EditOwnerPage;
+  WelcomePage;
+  VetsPage -> IndexPage [ label="goToIndexVetsPage()" ];
+  NewPetPage -> OwnerInformationPage [ label="submitNewPetPage(petName,date,petType)" ];
+  VisitsPage -> OwnerInformationPage [ label="formVisitsPage(date,visitDescription)" ];
+  OwnersPage -> OwnerInformationPage [ label="goToOwnerInformationOwnersPage(firstName,lastName)" ];
+  OwnersPage -> OwnersPage [ label="searchFilterOwnersPage(firstName,lastName)" ];
+  OwnerInformationPage -> NewPetPage [ label="goToAddNewPetOwnerInformationPage()" ];
+  OwnerInformationPage -> EditOwnerPage [ label="goToEditOwnerOwnerInformationPage()" ];
+  OwnerInformationPage -> NewPetPage [ label="goToEditPetThroghEditLinkOwnerInformationPage(petName)" ];
+  OwnerInformationPage -> NewPetPage [ label="goToEditPetThroughNameOwnerInformationPage(petName)" ];
+  OwnerInformationPage -> IndexPage [ label="goToIndexOwnerInformationPage()" ];
+  OwnerInformationPage -> VisitsPage [ label="goToVisitsOwnerInformationPage(petName)" ];
+  IndexPage -> NewOwnerPage [ label="goToNewOwnerIndexPage()" ];
+  IndexPage -> OwnersPage [ label="goToOwnersIndexPage()" ];
+  IndexPage -> VetsPage [ label="goToVetsIndexPage()" ];
+  IndexPage -> WelcomePage [ label="goToWelcomeIndexPage()" ];
+  NewOwnerPage -> OwnersPage [ label="submitOwnerFormNewOwnerPage(firstName,lastName,address,city,telephone)" ];
+  EditOwnerPage -> OwnerInformationPage [ label="editOwnerEditOwnerPage(firstName,lastName,address,city,telephone)" ];
+  WelcomePage -> IndexPage [ label="goToIndexWelcomePage()" ];
+  WelcomePage -> NewOwnerPage [ label="goToNewOwnerWelcomePage()" ];
+  WelcomePage -> OwnersPage [ label="goToOwnersWelcomePage()" ];
+}

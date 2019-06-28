@@ -1,0 +1,34 @@
+digraph G {
+  PreviousPage;
+  MenuPage;
+  AdvancedPage;
+  IndexPage;
+  LoginPage;
+  RetrospectivePage;
+  PreviousPage -> AdvancedPage [ label="goToAdvancedPreviousPage()" ];
+  PreviousPage -> IndexPage [ label="goToIndexPreviousPage()" ];
+  PreviousPage -> PreviousPage [ label="goToPreviousPreviousPage()" ];
+  PreviousPage -> RetrospectivePage [ label="goToRetrospectivePreviousPage(boardName)" ];
+  MenuPage -> IndexPage [ label="goToIndexMenuPage()" ];
+  MenuPage -> LoginPage [ label="logoutMenuPage()" ];
+  MenuPage -> RetrospectivePage [ label="toggleSummaryModeMenuPage()" ];
+  MenuPage -> RetrospectivePage [ label="untoggleSummaryModeMenuPage()" ];
+  AdvancedPage -> AdvancedPage [ label="goToAdvancedAdvancedPage()" ];
+  AdvancedPage -> IndexPage [ label="goToIndexAdvancedPage()" ];
+  AdvancedPage -> LoginPage [ label="goToLoginAdvancedPage()" ];
+  AdvancedPage -> PreviousPage [ label="goToPreviousAdvancedPage()" ];
+  IndexPage -> AdvancedPage [ label="goToAdvancedIndexPage()" ];
+  IndexPage -> IndexPage [ label="goToIndexIndexPage()" ];
+  IndexPage -> PreviousPage [ label="goToPreviousIndexPage()" ];
+  IndexPage -> RetrospectivePage [ label="goToRetrospectiveIndexPage()" ];
+  LoginPage -> IndexPage [ label="loginLoginPage(peopleName)" ];
+  LoginPage -> RetrospectivePage [ label="loginLoginPage(peopleName)" ];
+  RetrospectivePage -> RetrospectivePage [ label="createIdeasPostRetrospectivePage(ideasPost)" ];
+  RetrospectivePage -> RetrospectivePage [ label="createNotWentWellPostRetrospectivePage(notWentWellPost)" ];
+  RetrospectivePage -> RetrospectivePage [ label="createWentWellPostRetrospectivePage(wentWellPost)" ];
+  RetrospectivePage -> RetrospectivePage [ label="deleteIdeasPostRetrospectivePage(id)" ];
+  RetrospectivePage -> RetrospectivePage [ label="deleteNotWentWellPostRetrospectivePage(id)" ];
+  RetrospectivePage -> RetrospectivePage [ label="deleteWentWellPostRetrospectivePage(id)" ];
+  RetrospectivePage -> MenuPage [ label="goToMenuRetrospectivePage()" ];
+  RetrospectivePage -> RetrospectivePage [ label="renameBoardRetrospectivePage(newBoardName)" ];
+}
