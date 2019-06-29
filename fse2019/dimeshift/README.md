@@ -6,7 +6,7 @@ Execute the Bash script to initialize the Docker image containing the web applic
 
 `./run-docker.sh`
 
-Inside the container, start the Apache server with PHP and MySQL:
+Inside the container, start the application server and MySQL:
 
 `./run-services-docker.sh`
 
