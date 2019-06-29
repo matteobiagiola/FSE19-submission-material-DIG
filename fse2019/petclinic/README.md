@@ -15,7 +15,7 @@ The application shall run at the address:
 `http://localhost:3000`
 
 ### Admin Credentials
-No user is required to use the application (i.e. no login functionalities)
+No user is required to use the application (i.e. no login functionality)
 
 ### Stop application and remove container
 Type `^C` in the terminal and then type `exit` to exit from the container. In order to remove the container type `docker rm $(docker ps -aq)`. The command will remove all stopped containers.
