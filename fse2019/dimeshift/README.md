@@ -1,4 +1,4 @@
-Page objects for dimeshift application. Scripts to run test generation experiments.
+Page objects for the dimeshift application. Scripts to run test generation experiments.
 
 ### Run the application
 
