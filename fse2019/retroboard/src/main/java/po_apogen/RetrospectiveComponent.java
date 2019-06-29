@@ -1,6 +1,7 @@
 package po_apogen;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import po_utils.BasePageObject;
@@ -40,7 +41,13 @@ public class RetrospectiveComponent extends BasePageObject implements PageCompon
 	public void renameBoard(String newBoardName){
 		this.clickOn(By.xpath("//span[contains(@class,\"SessionName__editIcon___AOR2M\")]"));
 		WebElement inputElement = this.findElementSafely(By.xpath("//div[@class=\"SessionName__sessionName___10R1C\"]//div[@data-react-toolbox=\"input\"]/input[@type=\"text\"]"));
-		this.type(inputElement, newBoardName);
+		try {
+			this.type(inputElement, newBoardName);
+		} catch (StaleElementReferenceException ex) {
+			this.clickOn(By.xpath("//span[contains(@class,\"SessionName__editIcon___AOR2M\")]"));
+			inputElement = this.findElementSafely(By.xpath("//div[@class=\"SessionName__sessionName___10R1C\"]//div[@data-react-toolbox=\"input\"]/input[@type=\"text\"]"));
+			this.typeJS(inputElement, newBoardName);
+		}
 		this.pressKeyboardEnter(inputElement);
 	}
 
