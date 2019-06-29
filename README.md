@@ -3,6 +3,21 @@ This repository contains the tool implementing the approach described in an ESEC
 
 ## 1. Automatic Setup
 
+A virtual machine running Ubuntu server 16.04 is available for download at (). The virtual machine contains this repository and all the dependencies needed to run DIG on the web application subjects. 
+
+The virtual machine was created with VirtualBox and was exported in the `.ova` format, a platform-independent distribution format for virtual machines. It can be imported by any virtualization software although it was tested only on VirtualBox. Instructions on how to import an `.ova` format virtual machine in VirtualBox and VMWare Fusion are listed below:
+
+- VirtualBox: https://www.techjunkie.com/ova-virtualbox/
+- VMWare Fusion: https://pubs.vmware.com/fusion-5/index.jsp?topic=%2Fcom.vmware.fusion.help.doc%2FGUID-275EF202-CF74-43BF-A9E9-351488E16030.html
+
+The minimum amount of RAM to assign to the virtual machine is `4GB`.
+
+Login credentials:
+- username: `ubuntu`
+- password: `fse2019`
+
+If the automatic setup worked, you can skip to [the validation experiments section](#2-run-the-experiments-validation---after-the-setup). Otherwise procede to the [manual setup section](#11-manual-setup).
+
 #### 1.1 Manual Setup
 
 ##### 1.1.1 DIG and the test suite subjects have the following dependencies:
