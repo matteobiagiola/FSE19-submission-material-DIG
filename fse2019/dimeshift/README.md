@@ -12,7 +12,7 @@ Inside the container, start the Apache server with PHP and MySQL:
 
 The application shall run at the address:
 
-`http://localhost:3000
+`http://localhost:3000`
 
 ### Admin Credentials
 No user is pre-registered. In order to use the application a new user has to be registered.
