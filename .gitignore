@@ -3,12 +3,10 @@
 *.iml
 *~
 target/
-evosuite-files
-evosuite-report
-evosuite-tests
 plugins/jenkins/work
 build
 transitionLog.txt
+evosuite-report
 .DS_Store
 .project
 .settings
