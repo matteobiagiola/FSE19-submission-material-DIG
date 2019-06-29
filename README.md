@@ -3,7 +3,7 @@ This repository contains the tool implementing the approach described in an ESEC
 
 ## 1. Automatic Setup
 
-A virtual machine running Ubuntu server 16.04 is available for download at (). The virtual machine contains this repository and all the dependencies needed to run DIG on the web application subjects. 
+A virtual machine running Ubuntu server 16.04 is available for download at https://drive.google.com/file/d/1Op2oLQfELkCWGVJ5zrKS5GT1NwqZ96xA/view?usp=sharing. The virtual machine contains this repository and all the dependencies needed to run DIG on the web application subjects. 
 
 The virtual machine was created with VirtualBox and was exported in the `.ova` format, a platform-independent distribution format for virtual machines. It can be imported by any virtualization software although it was tested only on VirtualBox. Instructions on how to import an `.ova` format virtual machine in VirtualBox and VMWare Fusion are listed below:
 
@@ -16,7 +16,7 @@ Login credentials:
 - username: `ubuntu`
 - password: `fse2019`
 
-If the automatic setup worked, you can skip to [the validation experiments section](#2-run-the-experiments-validation---after-the-setup). Otherwise procede to the [manual setup section](#11-manual-setup).
+If the automatic setup worked, you can skip to [the run experiments section](#2-run-the-experiments-test-case-generation---after-the-setup). Otherwise procede to the [manual setup section](#11-manual-setup).
 
 #### 1.1 Manual Setup
 
@@ -46,8 +46,10 @@ Before running the experiments (assuming that `~` indicates the path the home di
   - `docker pull dockercontainervm/retroboard:latest` ([README](https://github.com/matteobiagiola/FSE19-submission-material-DIG/blob/master/fse2019/retroboard/README.md))
   - `docker pull dockercontainervm/petclinic:latest` ([README](https://github.com/matteobiagiola/FSE19-submission-material-DIG/blob/master/fse2019/petclinic/README.md))
 
-## 2. Run the experiments (test case generation - after step 1, setup)
+## 2. Run the experiments (test case generation - after the setup)
 
-## 3. Run the experiments (js code coverage - after step 2, test case generation)
+In each subject directory there is the `runExp.sh` script which can be used to run test generation experiments. Let us take the `dimeshift` application as example. The run experiments script can be found [here]()
+
+## 3. Run the experiments (js code coverage - after the setup)
 
 Coming soon
