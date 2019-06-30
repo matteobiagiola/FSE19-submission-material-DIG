@@ -33,7 +33,7 @@ DIG has been tested in MacOS Mojave 10.14.3 and Ubuntu (18.04 LTS and 16.04 LTS)
 
 ##### 1.1.2 Clone repo and download docker images
 
-Before running the experiments (assuming that `~` indicates the path the home directory in your system): 
+Before running the experiments (assuming that `~` indicates the path to the home directory in your system): 
 - clone the repository in `~/workspace` (create the folder `workspace` if it does not exist): `cd ~/workspace && git clone https://github.com/matteobiagiola/FSE19-submission-material-DIG.git` assuming that the directory `~/workspace` is empty
 - install evosuite: `cd ~/workpsace/evosuite && mvn clean install -DskipTests`
 - compile each subject: `cd ~/workpsace/fse2019/<application_name> && mvn clean compile` where `<application_name>` is: 
