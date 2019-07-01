@@ -3,8 +3,6 @@ package po_utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Properties;
 
 public class MyProperties {
@@ -13,6 +11,7 @@ public class MyProperties {
     public static String home_dir = System.getProperty("user.home");
     public static String separator = System.getProperty("file.separator");
     public static String javaHome = System.getProperty("java.home");
+    private String pathToESTestSuite;
     private Properties appProps;
 
     public static MyProperties getInstance() {
@@ -20,9 +19,10 @@ public class MyProperties {
     }
 
     private MyProperties() {
-        Path currentRelativePath = Paths.get("");
-        String currentDirectoryPath = currentRelativePath.toAbsolutePath().toString();
-        String appPropertiesPath = currentDirectoryPath + "/src/main/resources/app.properties";
+    }
+
+    public void loadProperties(String projectPath){
+        String appPropertiesPath = projectPath + "/src/main/resources/app.properties";
         try {
             FileInputStream fileInputStream = new FileInputStream(appPropertiesPath);
             this.appProps = new Properties();
@@ -42,5 +42,13 @@ public class MyProperties {
 
     public String getProperty(String propertyName, String defaultValue){
         return this.appProps.getProperty(propertyName, defaultValue);
+    }
+
+    public String getPathToESTestSuite() {
+        return pathToESTestSuite;
+    }
+
+    public void setPathToESTestSuite(String pathToESTestSuite) {
+        this.pathToESTestSuite = pathToESTestSuite;
     }
 }

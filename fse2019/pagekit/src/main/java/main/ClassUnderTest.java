@@ -6,10 +6,18 @@ import custom_classes.*;
 
 import po_utils.NotInTheRightPageObjectException;
 import po_utils.NotTheRightInputValuesException;
+import po_utils.ResetAppState;
 
 public class ClassUnderTest {
 
 	private Object currentPage = null;
+
+	public ClassUnderTest(WebDriver driver) {
+		ResetAppState.reset(driver);
+		po.signin.SignIn signIn = new po.signin.SignIn(driver);
+		signIn.singIn(Username.ADMIN, UserPassword.ADMIN);
+		this.currentPage = new po.dashboard.pages.DashboardContainerPage(driver);
+	}
 
 	// BOOTSTRAP POINT
 	public ClassUnderTest() {

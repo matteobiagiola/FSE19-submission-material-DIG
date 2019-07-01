@@ -6,10 +6,22 @@ import custom_classes.*;
 
 import po_utils.NotInTheRightPageObjectException;
 import po_utils.NotTheRightInputValuesException;
+import po_utils.ResetAppState;
 
 public class ClassUnderTestApogen {
 
 	private Object currentPage = null;
+
+	public ClassUnderTestApogen(WebDriver driver) {
+		ResetAppState.reset(driver);
+		po.shared.components.NavbarComponent navbarComponent = new po.shared.components.NavbarComponent(
+				driver);
+		navbarComponent.goToRegisterPage();
+		po.home.pages.RegisterPage registerPage = new po.home.pages.RegisterPage(
+				driver);
+		registerPage.register(Username.ASD, Email.ASD, Password.ASD);
+		this.currentPage = new po_apogen.WalletPage(driver);
+	}
 
 	// BOOTSTRAP POINT
 	public ClassUnderTestApogen() {

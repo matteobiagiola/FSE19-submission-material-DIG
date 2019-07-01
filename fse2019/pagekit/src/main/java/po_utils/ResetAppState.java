@@ -11,6 +11,20 @@ public class ResetAppState {
         reset();
     }
 
+    public static void reset(WebDriver webDriver){
+        int port = Integer.valueOf(MyProperties.getInstance().getProperty("dbPort"));
+        resetDB("root","root","pagekit", port,
+                MyProperties.getInstance().getProjectPath() + "/src/main/resources/pagekit_db.sql");
+        clearCookies(webDriver);
+        webDriver.get("http://localhost:" + Integer.valueOf(MyProperties.getInstance().getProperty("appPort"))
+                + "/pagekit/index.php/admin/login");
+    }
+
+    // needed for code-coverage
+    public static void quitDriver(WebDriver driver){
+        driver.quit();
+    }
+
     public static void reset(){
         int port = Integer.valueOf(MyProperties.getInstance().getProperty("dbPort"));
         resetDB("root","root","pagekit", port,"src/main/resources/pagekit_db.sql");

@@ -9,6 +9,18 @@ public class ResetAppState {
         reset();
     }
 
+    public static void reset(WebDriver driver){
+        int dbPort = Integer.valueOf(MyProperties.getInstance().getProperty("dbPort"));
+        clearDB("postgres","postgres","phoenix_trello_dev", dbPort);
+        clearStorage(driver);
+        driver.get("http://localhost:" + Integer.valueOf(MyProperties.getInstance().getProperty("appPort")));
+    }
+
+    // needed for code-coverage
+    public static void quitDriver(WebDriver driver){
+        driver.quit();
+    }
+
     public static void reset(){
         int dbPort = Integer.valueOf(MyProperties.getInstance().getProperty("dbPort"));
         clearDB("postgres","postgres","phoenix_trello_dev", dbPort);

@@ -12,6 +12,10 @@ public class ClassUnderTest {
 	private Object currentPage = null;
 	private WebDriver driver;
 
+	public ClassUnderTest(WebDriver driver) {
+		this.currentPage = new po.home.pages.HomePageContainerPage(driver);
+	}
+
 	// BOOTSTRAP POINT
 	public ClassUnderTest() {
 		// start driver and browser

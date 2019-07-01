@@ -1,0 +1,1521 @@
+* EvoSuite 1.0.4-SNAPSHOT
+* Going to generate test cases for class: main.ClassUnderTestApogen
+19:26:10,358 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback-evosuite.xml] at [jar:file:/Users/matteobiagiola/.m2/repository/org/evosuite/evosuite-client/1.0.4-SNAPSHOT/evosuite-client-1.0.4-SNAPSHOT.jar!/logback-evosuite.xml]
+19:26:10,359 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback-evosuite.xml] occurs multiple times on the classpath.
+19:26:10,359 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback-evosuite.xml] occurs at [jar:file:/Users/matteobiagiola/.m2/repository/org/evosuite/evosuite-client/1.0.4-SNAPSHOT/evosuite-client-1.0.4-SNAPSHOT.jar!/logback-evosuite.xml]
+19:26:10,359 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback-evosuite.xml] occurs at [jar:file:/Users/matteobiagiola/.m2/repository/org/evosuite/evosuite-master/1.0.4-SNAPSHOT/evosuite-master-1.0.4-SNAPSHOT.jar!/logback-evosuite.xml]
+19:26:10,377 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@6536e911 - URL [jar:file:/Users/matteobiagiola/.m2/repository/org/evosuite/evosuite-client/1.0.4-SNAPSHOT/evosuite-client-1.0.4-SNAPSHOT.jar!/logback-evosuite.xml] is not of type file
+19:26:10,506 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+19:26:15,517 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:26:15,523 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT_MASTER]
+19:26:15,553 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:26:15,593 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:26:15,593 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDERR_MASTER]
+19:26:15,594 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:26:15,594 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.net.SocketAppender]
+19:26:15,599 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT_CLIENT]
+19:26:15,615 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.net.SocketAppender]
+19:26:15,615 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDERR_CLIENT]
+19:26:15,616 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:26:15,616 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [EVO_LOGGER_MASTER]
+19:26:15,617 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:26:15,617 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.classic.net.SocketAppender]
+19:26:15,617 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [EVO_LOGGER_CLIENT]
+19:26:15,619 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [evo_logger] to ALL
+19:26:15,619 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [evo_logger] to false
+19:26:15,619 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [EVO_LOGGER_CLIENT] to Logger[evo_logger]
+19:26:15,620 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.evosuite] to INFO
+19:26:15,620 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT_CLIENT] to Logger[org.evosuite]
+19:26:15,620 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDERR_CLIENT] to Logger[org.evosuite]
+19:26:15,620 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [shaded.org.evosuite] to INFO
+19:26:15,620 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT_CLIENT] to Logger[shaded.org.evosuite]
+19:26:15,620 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDERR_CLIENT] to Logger[shaded.org.evosuite]
+19:26:15,620 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.evosuite.shaded] to OFF
+19:26:15,620 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [all] to ALL
+19:26:15,620 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to OFF
+19:26:15,620 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+19:26:15,622 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@520a3426 - Registering current configuration as safe fallback point
+
+* Starting client
+* Properties loaded from /Users/matteobiagiola/workspace/fse2019/petclinic/evosuite-files/evosuite.properties
+* Connecting to master process on port 18915
+[MASTER] 19:26:25.758 [logback-1] INFO  Randomness - No seed given. Using 1561742785758.
+[MASTER] 19:26:25.888 [logback-1] INFO  ClientNodeImpl - Client changing state from NOT_STARTED to STARTED
+* Analyzing classpath: 
+[MASTER] 19:26:25.899 [logback-1] INFO  ClientNodeImpl - Client changing state from STARTED to INITIALIZATION
+[MASTER] 19:26:25.952 [logback-1] INFO  TestCaseExecutor - No stalled threads
+[MASTER] 19:26:26.033 [logback-1] INFO  BytecodeInstrumentation - Starting transformation of main/ClassUnderTestApogen
+[MASTER] 19:26:26.036 [logback-1] INFO  StringTransformation - Current method: <init>
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToIndexVetsPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: submitNewPetPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: formVisitsPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToOwnerInformationOwnersPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: searchFilterOwnersPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToAddNewPetOwnerInformationPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToEditOwnerOwnerInformationPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToEditPetThroghEditLinkOwnerInformationPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToEditPetThroughNameOwnerInformationPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToIndexOwnerInformationPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToVisitsOwnerInformationPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToNewOwnerIndexPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToOwnersIndexPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToVetsIndexPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToWelcomeIndexPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: submitOwnerFormNewOwnerPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: editOwnerEditOwnerPage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToIndexWelcomePage
+[MASTER] 19:26:26.037 [logback-1] INFO  StringTransformation - Current method: goToNewOwnerWelcomePage
+[MASTER] 19:26:26.038 [logback-1] INFO  StringTransformation - Current method: goToOwnersWelcomePage
+[MASTER] 19:26:26.055 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.098 [logback-1] INFO  CFGMethodAdapter - Analyzing method <init>()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.101 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method <init>()V
+[MASTER] 19:26:26.110 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.<init>()V: 0
+[MASTER] 19:26:26.132 [logback-1] INFO  CFGMethodAdapter - Created CFG for method <init>()V
+[MASTER] 19:26:26.132 [logback-1] INFO  CFGMethodAdapter - Instrumenting method <init>()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.134 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.135 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToIndexVetsPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.135 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToIndexVetsPage()V
+[MASTER] 19:26:26.135 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToIndexVetsPage()V: 0
+[MASTER] 19:26:26.136 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 1 IFEQ L24
+[MASTER] 19:26:26.136 [logback-1] INFO  BranchPool - Branch 1 at line 24
+[MASTER] 19:26:26.145 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToIndexVetsPage()V
+[MASTER] 19:26:26.145 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToIndexVetsPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.149 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.149 [logback-1] INFO  CFGMethodAdapter - Analyzing method submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.149 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V
+[MASTER] 19:26:26.149 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V: 0
+[MASTER] 19:26:26.150 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 2 IFEQ L39
+[MASTER] 19:26:26.150 [logback-1] INFO  BranchPool - Branch 2 at line 39
+[MASTER] 19:26:26.157 [logback-1] INFO  CFGMethodAdapter - Created CFG for method submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V
+[MASTER] 19:26:26.158 [logback-1] INFO  CFGMethodAdapter - Instrumenting method submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.160 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.160 [logback-1] INFO  CFGMethodAdapter - Analyzing method formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.160 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V
+[MASTER] 19:26:26.160 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V: 0
+[MASTER] 19:26:26.161 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 3 IFEQ L54
+[MASTER] 19:26:26.161 [logback-1] INFO  BranchPool - Branch 3 at line 54
+[MASTER] 19:26:26.167 [logback-1] INFO  CFGMethodAdapter - Created CFG for method formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V
+[MASTER] 19:26:26.167 [logback-1] INFO  CFGMethodAdapter - Instrumenting method formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.169 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.170 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.170 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V
+[MASTER] 19:26:26.170 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: 0
+[MASTER] 19:26:26.171 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 4 IFEQ L70
+[MASTER] 19:26:26.171 [logback-1] INFO  BranchPool - Branch 4 at line 70
+[MASTER] 19:26:26.171 [logback-1] INFO  BranchPool - Adding to map the branch I19 Branch 5 IFEQ L72
+[MASTER] 19:26:26.171 [logback-1] INFO  BranchPool - Branch 5 at line 72
+[MASTER] 19:26:26.182 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V
+[MASTER] 19:26:26.182 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.186 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.186 [logback-1] INFO  CFGMethodAdapter - Analyzing method searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.186 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V
+[MASTER] 19:26:26.186 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: 0
+[MASTER] 19:26:26.186 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 6 IFEQ L91
+[MASTER] 19:26:26.186 [logback-1] INFO  BranchPool - Branch 6 at line 91
+[MASTER] 19:26:26.187 [logback-1] INFO  BranchPool - Adding to map the branch I19 Branch 7 IFEQ L93
+[MASTER] 19:26:26.187 [logback-1] INFO  BranchPool - Branch 7 at line 93
+[MASTER] 19:26:26.195 [logback-1] INFO  CFGMethodAdapter - Created CFG for method searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V
+[MASTER] 19:26:26.195 [logback-1] INFO  CFGMethodAdapter - Instrumenting method searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.199 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.199 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToAddNewPetOwnerInformationPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.199 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToAddNewPetOwnerInformationPage()V
+[MASTER] 19:26:26.199 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V: 0
+[MASTER] 19:26:26.199 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 8 IFEQ L111
+[MASTER] 19:26:26.199 [logback-1] INFO  BranchPool - Branch 8 at line 111
+[MASTER] 19:26:26.203 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToAddNewPetOwnerInformationPage()V
+[MASTER] 19:26:26.203 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToAddNewPetOwnerInformationPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.208 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.208 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToEditOwnerOwnerInformationPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.208 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToEditOwnerOwnerInformationPage()V
+[MASTER] 19:26:26.208 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V: 0
+[MASTER] 19:26:26.209 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 9 IFEQ L125
+[MASTER] 19:26:26.209 [logback-1] INFO  BranchPool - Branch 9 at line 125
+[MASTER] 19:26:26.214 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToEditOwnerOwnerInformationPage()V
+[MASTER] 19:26:26.214 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToEditOwnerOwnerInformationPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.216 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.216 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.217 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V
+[MASTER] 19:26:26.217 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V: 0
+[MASTER] 19:26:26.217 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 10 IFEQ L140
+[MASTER] 19:26:26.217 [logback-1] INFO  BranchPool - Branch 10 at line 140
+[MASTER] 19:26:26.217 [logback-1] INFO  BranchPool - Adding to map the branch I18 Branch 11 IFEQ L142
+[MASTER] 19:26:26.217 [logback-1] INFO  BranchPool - Branch 11 at line 142
+[MASTER] 19:26:26.226 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V
+[MASTER] 19:26:26.226 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.229 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.230 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.230 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V
+[MASTER] 19:26:26.230 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V: 0
+[MASTER] 19:26:26.230 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 12 IFEQ L162
+[MASTER] 19:26:26.230 [logback-1] INFO  BranchPool - Branch 12 at line 162
+[MASTER] 19:26:26.230 [logback-1] INFO  BranchPool - Adding to map the branch I18 Branch 13 IFEQ L164
+[MASTER] 19:26:26.230 [logback-1] INFO  BranchPool - Branch 13 at line 164
+[MASTER] 19:26:26.236 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V
+[MASTER] 19:26:26.236 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.240 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.240 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToIndexOwnerInformationPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.240 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToIndexOwnerInformationPage()V
+[MASTER] 19:26:26.240 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V: 0
+[MASTER] 19:26:26.240 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 14 IFEQ L182
+[MASTER] 19:26:26.240 [logback-1] INFO  BranchPool - Branch 14 at line 182
+[MASTER] 19:26:26.246 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToIndexOwnerInformationPage()V
+[MASTER] 19:26:26.246 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToIndexOwnerInformationPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.249 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.249 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.249 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V
+[MASTER] 19:26:26.249 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V: 0
+[MASTER] 19:26:26.249 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 15 IFEQ L196
+[MASTER] 19:26:26.249 [logback-1] INFO  BranchPool - Branch 15 at line 196
+[MASTER] 19:26:26.249 [logback-1] INFO  BranchPool - Adding to map the branch I18 Branch 16 IFEQ L198
+[MASTER] 19:26:26.249 [logback-1] INFO  BranchPool - Branch 16 at line 198
+[MASTER] 19:26:26.255 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V
+[MASTER] 19:26:26.256 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.259 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.259 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToNewOwnerIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.259 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToNewOwnerIndexPage()V
+[MASTER] 19:26:26.259 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToNewOwnerIndexPage()V: 0
+[MASTER] 19:26:26.259 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 17 IFEQ L215
+[MASTER] 19:26:26.260 [logback-1] INFO  BranchPool - Branch 17 at line 215
+[MASTER] 19:26:26.263 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToNewOwnerIndexPage()V
+[MASTER] 19:26:26.263 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToNewOwnerIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.265 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.265 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToOwnersIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.265 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToOwnersIndexPage()V
+[MASTER] 19:26:26.265 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToOwnersIndexPage()V: 0
+[MASTER] 19:26:26.265 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 18 IFEQ L229
+[MASTER] 19:26:26.265 [logback-1] INFO  BranchPool - Branch 18 at line 229
+[MASTER] 19:26:26.270 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToOwnersIndexPage()V
+[MASTER] 19:26:26.271 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToOwnersIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.273 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.273 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToVetsIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.274 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToVetsIndexPage()V
+[MASTER] 19:26:26.274 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToVetsIndexPage()V: 0
+[MASTER] 19:26:26.274 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 19 IFEQ L243
+[MASTER] 19:26:26.274 [logback-1] INFO  BranchPool - Branch 19 at line 243
+[MASTER] 19:26:26.278 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToVetsIndexPage()V
+[MASTER] 19:26:26.278 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToVetsIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.280 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.280 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToWelcomeIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.280 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToWelcomeIndexPage()V
+[MASTER] 19:26:26.281 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToWelcomeIndexPage()V: 0
+[MASTER] 19:26:26.281 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 20 IFEQ L257
+[MASTER] 19:26:26.281 [logback-1] INFO  BranchPool - Branch 20 at line 257
+[MASTER] 19:26:26.284 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToWelcomeIndexPage()V
+[MASTER] 19:26:26.285 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToWelcomeIndexPage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.286 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.286 [logback-1] INFO  CFGMethodAdapter - Analyzing method submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.286 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V
+[MASTER] 19:26:26.286 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: 0
+[MASTER] 19:26:26.286 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 21 IFEQ L275
+[MASTER] 19:26:26.286 [logback-1] INFO  BranchPool - Branch 21 at line 275
+[MASTER] 19:26:26.294 [logback-1] INFO  CFGMethodAdapter - Created CFG for method submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V
+[MASTER] 19:26:26.295 [logback-1] INFO  CFGMethodAdapter - Instrumenting method submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.296 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.297 [logback-1] INFO  CFGMethodAdapter - Analyzing method editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.297 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V
+[MASTER] 19:26:26.297 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: 0
+[MASTER] 19:26:26.298 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 22 IFEQ L293
+[MASTER] 19:26:26.298 [logback-1] INFO  BranchPool - Branch 22 at line 293
+[MASTER] 19:26:26.301 [logback-1] INFO  CFGMethodAdapter - Created CFG for method editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V
+[MASTER] 19:26:26.301 [logback-1] INFO  CFGMethodAdapter - Instrumenting method editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.303 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.303 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToIndexWelcomePage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.306 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToIndexWelcomePage()V
+[MASTER] 19:26:26.306 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToIndexWelcomePage()V: 0
+[MASTER] 19:26:26.307 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 23 IFEQ L308
+[MASTER] 19:26:26.307 [logback-1] INFO  BranchPool - Branch 23 at line 308
+[MASTER] 19:26:26.309 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToIndexWelcomePage()V
+[MASTER] 19:26:26.309 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToIndexWelcomePage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.311 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.311 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToNewOwnerWelcomePage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.312 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToNewOwnerWelcomePage()V
+[MASTER] 19:26:26.312 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V: 0
+[MASTER] 19:26:26.312 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 24 IFEQ L322
+[MASTER] 19:26:26.312 [logback-1] INFO  BranchPool - Branch 24 at line 322
+[MASTER] 19:26:26.316 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToNewOwnerWelcomePage()V
+[MASTER] 19:26:26.316 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToNewOwnerWelcomePage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.317 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.318 [logback-1] INFO  CFGMethodAdapter - Analyzing method goToOwnersWelcomePage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.318 [logback-1] INFO  CFGMethodAdapter - Generating CFG for method goToOwnersWelcomePage()V
+[MASTER] 19:26:26.318 [logback-1] INFO  RawControlFlowGraph - Creating new RawCFG for main.ClassUnderTestApogen.goToOwnersWelcomePage()V: 0
+[MASTER] 19:26:26.318 [logback-1] INFO  BranchPool - Adding to map the branch I5 Branch 25 IFEQ L336
+[MASTER] 19:26:26.318 [logback-1] INFO  BranchPool - Branch 25 at line 336
+[MASTER] 19:26:26.322 [logback-1] INFO  CFGMethodAdapter - Created CFG for method goToOwnersWelcomePage()V
+[MASTER] 19:26:26.322 [logback-1] INFO  CFGMethodAdapter - Instrumenting method goToOwnersWelcomePage()V in class main.ClassUnderTestApogen
+[MASTER] 19:26:26.323 [logback-1] INFO  CFGClassAdapter - Analyzing CFG of main/ClassUnderTestApogen
+[MASTER] 19:26:26.323 [logback-1] INFO  CFGMethodAdapter - Method has EvoSuite annotation: Lorg/evosuite/runtime/annotation/EvoSuiteExclude;
+  - target/classes
+[MASTER] 19:26:27.619 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/VisitDescriptions
+[MASTER] 19:26:27.620 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/Telephones
+[MASTER] 19:26:27.620 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/PetNames
+[MASTER] 19:26:27.621 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/FirstNames
+[MASTER] 19:26:27.622 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/Addresses
+[MASTER] 19:26:27.623 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/Dates
+[MASTER] 19:26:27.623 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/LongPetNames
+[MASTER] 19:26:27.625 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/LongFirstNames
+[MASTER] 19:26:27.626 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/LastNames
+[MASTER] 19:26:27.627 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/Cities
+[MASTER] 19:26:27.628 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/PetTypes
+[MASTER] 19:26:27.628 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class custom_classes/LongTelephones
+[MASTER] 19:26:27.629 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/EditOwnerPage
+[MASTER] 19:26:27.630 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/NewPetPage
+[MASTER] 19:26:27.631 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/NewPetComponent
+[MASTER] 19:26:27.632 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/OwnerInformationComponent
+[MASTER] 19:26:27.634 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/WelcomeComponent
+[MASTER] 19:26:27.635 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/IndexComponent
+[MASTER] 19:26:27.639 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/NewOwnerPage
+[MASTER] 19:26:27.641 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/VetsPage
+[MASTER] 19:26:27.642 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/IndexPage
+[MASTER] 19:26:27.642 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/WelcomePage
+[MASTER] 19:26:27.643 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/VetsComponent
+[MASTER] 19:26:27.643 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/VisitsComponent
+[MASTER] 19:26:27.644 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/OwnersComponent
+[MASTER] 19:26:27.644 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/VisitsPage
+[MASTER] 19:26:27.645 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/OwnersPage
+[MASTER] 19:26:27.645 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/NewOwnerComponent
+[MASTER] 19:26:27.646 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/EditOwnerComponent
+[MASTER] 19:26:27.646 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_apogen/OwnerInformationPage
+[MASTER] 19:26:27.647 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$10
+[MASTER] 19:26:27.648 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/PageComponent
+[MASTER] 19:26:27.648 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$12
+[MASTER] 19:26:27.650 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$16
+[MASTER] 19:26:27.652 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ConstantLocators
+[MASTER] 19:26:27.652 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$14
+[MASTER] 19:26:27.653 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$8
+[MASTER] 19:26:27.654 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/PageObject
+[MASTER] 19:26:27.655 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$13
+[MASTER] 19:26:27.655 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$11
+[MASTER] 19:26:27.656 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/FormValue
+[MASTER] 19:26:27.657 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/TestData
+[MASTER] 19:26:27.657 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ExpectedConditionPropertyThatDisappears
+[MASTER] 19:26:27.658 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/PageObjectLogging
+[MASTER] 19:26:27.659 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/Range
+[MASTER] 19:26:27.660 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$9
+[MASTER] 19:26:27.662 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$15
+[MASTER] 19:26:27.662 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/MySqlConnection
+[MASTER] 19:26:27.663 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/BasePageObject
+[MASTER] 19:26:27.664 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/Wait
+[MASTER] 19:26:27.665 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$17
+[MASTER] 19:26:27.665 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/NotTheRightInputValuesException
+[MASTER] 19:26:27.666 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ExceptionUtils
+[MASTER] 19:26:27.667 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/DriverProvider
+[MASTER] 19:26:27.667 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ExpectedConditionTextThatChanges
+[MASTER] 19:26:27.668 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ExpectedConditionElementToBeInvisible
+[MASTER] 19:26:27.668 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/NotInTheRightPageObjectException
+[MASTER] 19:26:27.669 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$7
+[MASTER] 19:26:27.669 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/MySqlConnection$1
+[MASTER] 19:26:27.670 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/MyProperties
+[MASTER] 19:26:27.670 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$5
+[MASTER] 19:26:27.671 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/XSSContent
+[MASTER] 19:26:27.671 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$19
+[MASTER] 19:26:27.672 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/DriverProvider$1
+[MASTER] 19:26:27.672 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$1
+[MASTER] 19:26:27.673 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonUtils
+[MASTER] 19:26:27.673 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$3
+[MASTER] 19:26:27.674 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/IntRange
+[MASTER] 19:26:27.674 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/SelectorStack
+[MASTER] 19:26:27.675 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CheckCondition
+[MASTER] 19:26:27.675 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$18
+[MASTER] 19:26:27.676 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$4
+[MASTER] 19:26:27.677 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ExpectedConditionElementToBeClickable
+[MASTER] 19:26:27.677 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ParametricPageComponent
+[MASTER] 19:26:27.678 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ResetAppState
+[MASTER] 19:26:27.678 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$6
+[MASTER] 19:26:27.679 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions$2
+[MASTER] 19:26:27.679 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/ExpectedConditionPropertyThatChanges
+[MASTER] 19:26:27.680 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/CommonExpectedConditions
+[MASTER] 19:26:27.681 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po_utils/JavascriptActions
+[MASTER] 19:26:27.681 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/home/components/HomeComponent
+[MASTER] 19:26:27.682 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/home/pages/HomeContainerPage
+[MASTER] 19:26:27.682 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/pets/components/AddEditPetComponent
+[MASTER] 19:26:27.683 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/pets/components/AddEditVisitComponent
+[MASTER] 19:26:27.684 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/pets/pages/AddEditVisitContainerPage
+[MASTER] 19:26:27.685 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/pets/pages/AddEditPetContainerPage
+[MASTER] 19:26:27.685 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/shared/components/NavbarComponent
+[MASTER] 19:26:27.686 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/veterinarians/components/VeterinariansComponent
+[MASTER] 19:26:27.686 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/veterinarians/pages/VeterinariansContainerPage
+[MASTER] 19:26:27.687 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/owners/components/OwnersListComponent
+[MASTER] 19:26:27.688 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/owners/components/OwnerInformationComponent
+[MASTER] 19:26:27.688 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/owners/components/AddEditOwnerComponent
+[MASTER] 19:26:27.689 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/owners/pages/OwnerInformationContainerPage
+[MASTER] 19:26:27.690 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/owners/pages/OwnersListContainerPage
+[MASTER] 19:26:27.690 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class po/owners/pages/AddEditOwnerContainerPage
+[MASTER] 19:26:27.691 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class main/ClassUnderTest
+[MASTER] 19:26:27.691 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class main/ClassUnderTestApogen
+[MASTER] 19:26:27.692 [logback-1] INFO  InheritanceTreeGenerator - Analyzing class main/Main
+[MASTER] 19:26:27.692 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Classpath_Classes = 4845
+[MASTER] 19:26:27.710 [logback-1] INFO  DependencyAnalysis - Could not find class file: [Lorg/openqa/selenium/Platform;
+[MASTER] 19:26:27.728 [logback-1] INFO  DependencyAnalysis - Could not find class file: [Ljava/lang/Object;
+[MASTER] 19:26:27.890 [logback-1] INFO  CallGraphGenerator - Updating call tree 
+[MASTER] 19:26:27.897 [logback-1] INFO  TestClusterGenerator - Handling cast classes
+[MASTER] 19:26:27.947 [logback-1] INFO  TestClusterGenerator - Initialising target class
+[MASTER] 19:26:27.947 [logback-1] INFO  TestClusterGenerator - Analyzing target class
+[MASTER] 19:26:27.951 [logback-1] INFO  TestClusterGenerator - Current SUT class: class main.ClassUnderTestApogen
+[MASTER] 19:26:27.951 [logback-1] INFO  TestClusterGenerator - Checking target constructor public main.ClassUnderTestApogen()
+[MASTER] 19:26:27.974 [logback-1] INFO  TestClusterGenerator - Checking target method public static void main.ClassUnderTestApogen.__STATIC_RESET()
+[MASTER] 19:26:27.975 [logback-1] INFO  TestClusterGenerator - Checking target method protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+[MASTER] 19:26:27.977 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.editOwnerEditOwnerPage(custom_classes.FirstNames,custom_classes.LastNames,custom_classes.Addresses,custom_classes.Cities,custom_classes.Telephones)
+[MASTER] 19:26:27.991 [logback-1] INFO  TestClusterGenerator - Checking target method public boolean java.lang.Object.equals(java.lang.Object)
+[MASTER] 19:26:27.991 [logback-1] INFO  TestClusterGenerator - Checking target method protected void java.lang.Object.finalize() throws java.lang.Throwable
+[MASTER] 19:26:27.991 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.formVisitsPage(custom_classes.Dates,custom_classes.VisitDescriptions)
+[MASTER] 19:26:27.992 [logback-1] INFO  TestClusterGenerator - Checking target method public final native java.lang.Class java.lang.Object.getClass()
+[MASTER] 19:26:27.992 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()
+[MASTER] 19:26:27.992 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()
+[MASTER] 19:26:27.993 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(custom_classes.PetNames)
+[MASTER] 19:26:27.993 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(custom_classes.PetNames)
+[MASTER] 19:26:27.994 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToIndexOwnerInformationPage()
+[MASTER] 19:26:27.994 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToIndexVetsPage()
+[MASTER] 19:26:27.994 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToIndexWelcomePage()
+[MASTER] 19:26:27.994 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToNewOwnerIndexPage()
+[MASTER] 19:26:27.994 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToNewOwnerWelcomePage()
+[MASTER] 19:26:27.994 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(custom_classes.FirstNames,custom_classes.LastNames)
+[MASTER] 19:26:27.995 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToOwnersIndexPage()
+[MASTER] 19:26:27.995 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToOwnersWelcomePage()
+[MASTER] 19:26:27.995 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToVetsIndexPage()
+[MASTER] 19:26:27.996 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(custom_classes.PetNames)
+[MASTER] 19:26:27.997 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.goToWelcomeIndexPage()
+[MASTER] 19:26:27.998 [logback-1] INFO  TestClusterGenerator - Checking target method public int main.ClassUnderTestApogen.hashCode()
+[MASTER] 19:26:27.998 [logback-1] INFO  TestClusterGenerator - Checking target method public final native void java.lang.Object.notify()
+[MASTER] 19:26:27.999 [logback-1] INFO  TestClusterGenerator - Checking target method public final native void java.lang.Object.notifyAll()
+[MASTER] 19:26:27.999 [logback-1] INFO  TestClusterGenerator - Checking target method private static native void java.lang.Object.registerNatives()
+[MASTER] 19:26:27.999 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.searchFilterOwnersPage(custom_classes.FirstNames,custom_classes.LastNames)
+[MASTER] 19:26:28.000 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.submitNewPetPage(custom_classes.PetNames,custom_classes.Dates,custom_classes.PetTypes)
+[MASTER] 19:26:28.002 [logback-1] INFO  TestClusterGenerator - Checking target method public void main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(custom_classes.FirstNames,custom_classes.LastNames,custom_classes.Addresses,custom_classes.Cities,custom_classes.Telephones)
+[MASTER] 19:26:28.004 [logback-1] INFO  TestClusterGenerator - Checking target method public java.lang.String java.lang.Object.toString()
+[MASTER] 19:26:28.004 [logback-1] INFO  TestClusterGenerator - Checking target method public final void java.lang.Object.wait() throws java.lang.InterruptedException
+[MASTER] 19:26:28.004 [logback-1] INFO  TestClusterGenerator - Checking target method public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+[MASTER] 19:26:28.004 [logback-1] INFO  TestClusterGenerator - Checking target method public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+[MASTER] 19:26:28.005 [logback-1] INFO  TestClusterGenerator - Checking target field private java.lang.Object main.ClassUnderTestApogen.currentPage
+[MASTER] 19:26:28.010 [logback-1] INFO  TestClusterGenerator - Finished analyzing target class
+[MASTER] 19:26:28.010 [logback-1] INFO  TestClusterGenerator - Resolving dependencies
+[MASTER] 19:26:28.013 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.WebDriver
+[MASTER] 19:26:28.023 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class org.openqa.selenium.WebDriver
+[MASTER] 19:26:28.037 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.VisitsPage at recursion level 1
+[MASTER] 19:26:28.040 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.VetsPage at recursion level 1
+[MASTER] 19:26:28.043 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.WelcomePage at recursion level 1
+[MASTER] 19:26:28.047 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.NewOwnerPage at recursion level 1
+[MASTER] 19:26:28.051 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.NewPetPage at recursion level 1
+[MASTER] 19:26:28.057 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.OwnersPage at recursion level 1
+[MASTER] 19:26:28.061 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.OwnerInformationPage at recursion level 1
+[MASTER] 19:26:28.064 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.EditOwnerPage at recursion level 1
+[MASTER] 19:26:28.067 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.IndexPage at recursion level 1
+[MASTER] 19:26:28.070 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.FirstNames at recursion level 1
+[MASTER] 19:26:28.071 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.LastNames at recursion level 1
+[MASTER] 19:26:28.073 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.Addresses at recursion level 1
+[MASTER] 19:26:28.074 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.Cities at recursion level 1
+[MASTER] 19:26:28.076 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.Telephones at recursion level 1
+[MASTER] 19:26:28.077 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.Dates at recursion level 1
+[MASTER] 19:26:28.079 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.VisitDescriptions at recursion level 1
+[MASTER] 19:26:28.081 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.PetNames at recursion level 1
+[MASTER] 19:26:28.082 [logback-1] INFO  TestClusterGenerator - Finished analyzing custom_classes.PetTypes at recursion level 1
+[MASTER] 19:26:28.112 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.Alert was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.115 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebDriver$TargetLocator was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.116 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebDriver was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.117 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.By
+[MASTER] 19:26:28.132 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.WebElement
+[MASTER] 19:26:28.139 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class org.openqa.selenium.WebElement
+[MASTER] 19:26:28.142 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebElement was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.142 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.Alert was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.143 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebDriver was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.144 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebDriver was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.147 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebElement was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.151 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebElement was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.160 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebElement was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.162 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebElement was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.164 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.WebElement was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.191 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.VisitsComponent at recursion level 2
+[MASTER] 19:26:28.195 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.VetsComponent at recursion level 2
+[MASTER] 19:26:28.199 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.WelcomeComponent at recursion level 2
+[MASTER] 19:26:28.203 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.NewOwnerComponent at recursion level 2
+[MASTER] 19:26:28.207 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.NewPetComponent at recursion level 2
+[MASTER] 19:26:28.212 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.OwnersComponent at recursion level 2
+[MASTER] 19:26:28.217 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.OwnerInformationComponent at recursion level 2
+[MASTER] 19:26:28.220 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.EditOwnerComponent at recursion level 2
+[MASTER] 19:26:28.223 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_apogen.IndexComponent at recursion level 2
+[MASTER] 19:26:28.224 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.By was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.224 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.By was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.224 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.SearchContext
+[MASTER] 19:26:28.224 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class org.openqa.selenium.SearchContext
+[MASTER] 19:26:28.225 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.By was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.228 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.openqa.selenium.By at recursion level 3
+[MASTER] 19:26:28.231 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.concurrent.TimeUnit at recursion level 3
+[MASTER] 19:26:28.250 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.interactions.ClickAndHoldAction was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.250 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.ClickAndHoldAction
+[MASTER] 19:26:28.255 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.interactions.MoveMouseAction was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.255 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.MoveMouseAction
+[MASTER] 19:26:28.256 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.interactions.KeyDownAction was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.256 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.KeyDownAction
+[MASTER] 19:26:28.258 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.interactions.MoveToOffsetAction was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.258 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.MoveToOffsetAction
+[MASTER] 19:26:28.260 [logback-1] WARN  CheapPurityAnalyzer - com.google.common.base.Preconditions was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.260 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: com.google.common.base.Preconditions
+[MASTER] 19:26:28.260 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.interactions.ButtonReleaseAction was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.260 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.ButtonReleaseAction
+[MASTER] 19:26:28.262 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.interactions.SendKeysAction was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.263 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.SendKeysAction
+[MASTER] 19:26:28.264 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.Action
+[MASTER] 19:26:28.265 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class org.openqa.selenium.interactions.Action
+[MASTER] 19:26:28.267 [logback-1] WARN  CheapPurityAnalyzer - com.google.common.base.Preconditions was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.267 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.interactions.Interaction
+[MASTER] 19:26:28.268 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class org.openqa.selenium.interactions.Interaction
+[MASTER] 19:26:28.282 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.openqa.selenium.interactions.Actions at recursion level 3
+[MASTER] 19:26:28.288 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.support.ui.Clock
+[MASTER] 19:26:28.289 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class org.openqa.selenium.support.ui.Clock
+[MASTER] 19:26:28.290 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.support.ui.Sleeper
+[MASTER] 19:26:28.297 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class org.openqa.selenium.support.ui.Sleeper
+[MASTER] 19:26:28.298 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public org.openqa.selenium.support.ui.FluentWait org.openqa.selenium.support.ui.FluentWait.ignoreAll(java.util.Collection)
+[MASTER] 19:26:28.299 [logback-1] WARN  CheapPurityAnalyzer - com.google.common.collect.ImmutableList was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.300 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: com.google.common.collect.ImmutableList
+[MASTER] 19:26:28.301 [logback-1] WARN  CheapPurityAnalyzer - com.google.common.collect.ImmutableList was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.302 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.lang.Object org.openqa.selenium.support.ui.FluentWait.until(java.util.function.Function)
+[MASTER] 19:26:28.303 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.util.function.Supplier
+[MASTER] 19:26:28.304 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.openqa.selenium.support.ui.WebDriverWait at recursion level 3
+[MASTER] 19:26:28.305 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.support.ui.ExpectedConditions was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.307 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.support.ui.ExpectedConditions
+[MASTER] 19:26:28.308 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.support.ui.SystemClock was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.308 [logback-1] WARN  InheritanceTree - Class not in inheritance graph: org.openqa.selenium.support.ui.SystemClock
+[MASTER] 19:26:28.308 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.support.ui.ExpectedConditions was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.309 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.support.ui.ExpectedConditions was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.310 [logback-1] INFO  TestClusterGenerator - Finished analyzing po_utils.Wait at recursion level 3
+[MASTER] 19:26:28.312 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.lang.Object at recursion level 4
+[MASTER] 19:26:28.326 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.lang.MockThread at recursion level 4
+[MASTER] 19:26:28.332 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.nio.CharBuffer at recursion level 4
+[MASTER] 19:26:28.342 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.Duration at recursion level 4
+[MASTER] 19:26:28.343 [logback-1] WARN  CheapPurityAnalyzer - org.openqa.selenium.support.ui.Duration was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 19:26:28.344 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.openqa.selenium.support.ui.Duration at recursion level 4
+[MASTER] 19:26:28.348 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.lang.ThreadGroup at recursion level 5
+[MASTER] 19:26:28.359 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.lang.ClassLoader at recursion level 5
+[MASTER] 19:26:28.370 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public static java.lang.Object org.evosuite.runtime.mock.java.time.MockInstant.query(java.time.Instant,java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.373 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockInstant at recursion level 5
+[MASTER] 19:26:28.375 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockLocalDate at recursion level 5
+[MASTER] 19:26:28.378 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockLocalDateTime at recursion level 5
+[MASTER] 19:26:28.380 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockLocalTime at recursion level 5
+[MASTER] 19:26:28.382 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockOffsetDateTime at recursion level 5
+[MASTER] 19:26:28.383 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockOffsetTime at recursion level 5
+[MASTER] 19:26:28.385 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockYear at recursion level 5
+[MASTER] 19:26:28.386 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockYearMonth at recursion level 5
+[MASTER] 19:26:28.389 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockZonedDateTime at recursion level 5
+[MASTER] 19:26:28.393 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.Period at recursion level 5
+[MASTER] 19:26:28.394 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.time.temporal.Temporal java.time.temporal.ChronoUnit.addTo(java.time.temporal.Temporal,long)
+[MASTER] 19:26:28.395 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.temporal.ChronoUnit at recursion level 5
+[MASTER] 19:26:28.399 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.lang.MockThrowable at recursion level 6
+[MASTER] 19:26:28.402 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.lang.Object java.time.ZoneOffset.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.403 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.ZoneOffset at recursion level 6
+[MASTER] 19:26:28.404 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.ZoneId at recursion level 6
+[MASTER] 19:26:28.406 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.lang.Object java.time.DayOfWeek.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.407 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.DayOfWeek at recursion level 6
+[MASTER] 19:26:28.409 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.lang.Object java.time.Month.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.410 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.Month at recursion level 6
+[MASTER] 19:26:28.411 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockMonthDay at recursion level 6
+[MASTER] 19:26:28.412 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.time.temporal.Temporal java.time.temporal.ChronoField.adjustInto(java.time.temporal.Temporal,long)
+[MASTER] 19:26:28.415 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.temporal.ChronoField at recursion level 6
+[MASTER] 19:26:28.417 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.MockClock at recursion level 6
+[MASTER] 19:26:28.424 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.lang.Object java.time.format.DateTimeFormatter.parse(java.lang.CharSequence,java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.425 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.time.temporal.TemporalQuery
+[MASTER] 19:26:28.429 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.format.DateTimeFormatter at recursion level 6
+[MASTER] 19:26:28.430 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockHijrahDate at recursion level 6
+[MASTER] 19:26:28.431 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockJapaneseDate at recursion level 6
+[MASTER] 19:26:28.432 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockMinguoDate at recursion level 6
+[MASTER] 19:26:28.433 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockThaiBuddhistDate at recursion level 6
+[MASTER] 19:26:28.437 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.lang.Object java.time.chrono.ChronoLocalDate.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.438 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.chrono.ChronoLocalDate at recursion level 6
+[MASTER] 19:26:28.445 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.PrintStream at recursion level 7
+[MASTER] 19:26:28.452 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.PrintWriter at recursion level 7
+[MASTER] 19:26:28.453 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.lang.StackTraceElement at recursion level 7
+[MASTER] 19:26:28.454 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.format.TextStyle at recursion level 7
+[MASTER] 19:26:28.463 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.Locale at recursion level 7
+[MASTER] 19:26:28.467 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.util.function.BiFunction
+[MASTER] 19:26:28.469 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.util.function.BiConsumer
+[MASTER] 19:26:28.471 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.HashMap<K, V> at recursion level 7
+[MASTER] 19:26:28.472 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.format.ResolverStyle at recursion level 7
+[MASTER] 19:26:28.474 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.CharArrayWriter at recursion level 7
+[MASTER] 19:26:28.476 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.PipedWriter at recursion level 7
+[MASTER] 19:26:28.478 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.StringWriter at recursion level 7
+[MASTER] 19:26:28.480 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.nio.charset.CharsetEncoder
+[MASTER] 19:26:28.481 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.OutputStreamWriter at recursion level 7
+[MASTER] 19:26:28.483 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.BufferedWriter at recursion level 7
+[MASTER] 19:26:28.484 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.FileWriter at recursion level 7
+[MASTER] 19:26:28.486 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.format.FormatStyle at recursion level 7
+[MASTER] 19:26:28.486 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.text.ParsePosition at recursion level 7
+[MASTER] 19:26:28.487 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockHijrahChronology at recursion level 7
+[MASTER] 19:26:28.488 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockIsoChronology at recursion level 7
+[MASTER] 19:26:28.488 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockJapaneseChronology at recursion level 7
+[MASTER] 19:26:28.489 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockMinguoChronology at recursion level 7
+[MASTER] 19:26:28.490 [logback-1] INFO  TestClusterGenerator - Finished analyzing org.evosuite.runtime.mock.java.time.chrono.MockThaiBuddhistChronology at recursion level 7
+[MASTER] 19:26:28.494 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.chrono.Chronology at recursion level 7
+[MASTER] 19:26:28.495 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.format.DecimalStyle at recursion level 7
+[MASTER] 19:26:28.498 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.util.function.Consumer
+[MASTER] 19:26:28.500 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public abstract java.lang.Object[] java.util.Set.toArray(java.lang.Object[])
+[MASTER] 19:26:28.500 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.LinkedHashSet<E> at recursion level 7
+[MASTER] 19:26:28.502 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.lang.Object java.time.chrono.Era.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.505 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.chrono.JapaneseEra at recursion level 7
+[MASTER] 19:26:28.508 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.io.FilenameFilter
+[MASTER] 19:26:28.509 [logback-1] INFO  ConcreteClassAnalyzer - Don't know how to instantiate abstract class java.io.FileFilter
+[MASTER] 19:26:28.511 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.File at recursion level 8
+[MASTER] 19:26:28.512 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.PipedOutputStream at recursion level 8
+[MASTER] 19:26:28.516 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.ObjectOutputStream at recursion level 8
+[MASTER] 19:26:28.518 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.FilterOutputStream at recursion level 8
+[MASTER] 19:26:28.520 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.FileOutputStream at recursion level 8
+[MASTER] 19:26:28.520 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.ByteArrayOutputStream at recursion level 8
+[MASTER] 19:26:28.521 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.DataOutputStream at recursion level 8
+[MASTER] 19:26:28.522 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.BufferedOutputStream at recursion level 8
+[MASTER] 19:26:28.530 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public java.lang.Object[] java.util.LinkedList.toArray(java.lang.Object[])
+[MASTER] 19:26:28.530 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.LinkedList<E> at recursion level 8
+[MASTER] 19:26:28.531 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.Locale$FilteringMode at recursion level 8
+[MASTER] 19:26:28.532 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.Locale$Category at recursion level 8
+[MASTER] 19:26:28.532 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.util.function.Function java.util.function.Function.andThen(java.util.function.Function)
+[MASTER] 19:26:28.532 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.util.function.Function java.util.function.Function.compose(java.util.function.Function)
+[MASTER] 19:26:28.532 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public static java.util.function.Function java.util.function.Function.identity()
+[MASTER] 19:26:28.532 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.function.Function<T, R> at recursion level 8
+[MASTER] 19:26:28.534 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.PipedReader at recursion level 8
+[MASTER] 19:26:28.536 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.nio.charset.Charset at recursion level 8
+[MASTER] 19:26:28.537 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.FileDescriptor at recursion level 8
+[MASTER] 19:26:28.538 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.lang.Object java.time.chrono.Era.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.539 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.chrono.HijrahEra at recursion level 8
+[MASTER] 19:26:28.540 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.lang.Object java.time.chrono.Era.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.540 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.chrono.IsoEra at recursion level 8
+[MASTER] 19:26:28.541 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.lang.Object java.time.chrono.Era.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.542 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.chrono.MinguoEra at recursion level 8
+[MASTER] 19:26:28.543 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.lang.Object java.time.chrono.Era.query(java.time.temporal.TemporalQuery)
+[MASTER] 19:26:28.544 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.time.chrono.ThaiBuddhistEra at recursion level 8
+[MASTER] 19:26:28.544 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public static java.util.function.Predicate java.util.function.Predicate.isEqual(java.lang.Object)
+[MASTER] 19:26:28.544 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.function.Predicate<T> at recursion level 8
+[MASTER] 19:26:28.548 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.net.URI at recursion level 9
+[MASTER] 19:26:28.549 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.io.PipedInputStream at recursion level 9
+[MASTER] 19:26:28.549 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.util.function.Function java.util.function.Function.andThen(java.util.function.Function)
+[MASTER] 19:26:28.549 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public default java.util.function.Function java.util.function.Function.compose(java.util.function.Function)
+[MASTER] 19:26:28.549 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public static java.util.function.Function java.util.function.Function.identity()
+[MASTER] 19:26:28.549 [logback-1] INFO  TestClusterGenerator - Type parameters in methods are not handled yet, skipping public static java.util.function.UnaryOperator java.util.function.UnaryOperator.identity()
+[MASTER] 19:26:28.550 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.util.function.UnaryOperator<T> at recursion level 9
+[MASTER] 19:26:28.557 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.nio.ByteBuffer at recursion level 9
+[MASTER] 19:26:28.557 [logback-1] INFO  TestClusterGenerator - Finished analyzing java.nio.ByteOrder at recursion level 10
+[MASTER] 19:26:28.557 [logback-1] INFO  TestClusterGenerator - Removing unusable generators
+[MASTER] 19:26:28.740 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Analyzed_Classes = 114
+[MASTER] 19:26:28.742 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Generators = 959
+[MASTER] 19:26:28.744 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Modifiers = 1186
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Predicates = 25
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Instrumented_Predicates = 0
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Total_Branches = 50
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Total_Branches_Real = 12
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Total_Branches_Instrumented = 0
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Branchless_Methods = 1
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Total_Methods = 21
+[MASTER] 19:26:28.745 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Lines = 21
+* Finished analyzing classpath
+* Generating tests for class main.ClassUnderTestApogen
+* Test criterion:
+  - Line Coverage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####constructor: main.ClassUnderTestApogen
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: editOwnerEditOwnerPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: formVisitsPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToAddNewPetOwnerInformationPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditOwnerOwnerInformationPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditPetThroghEditLinkOwnerInformationPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditPetThroughNameOwnerInformationPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexOwnerInformationPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexVetsPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexWelcomePage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToNewOwnerIndexPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToNewOwnerWelcomePage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnerInformationOwnersPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnersIndexPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnersWelcomePage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToVetsIndexPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToVisitsOwnerInformationPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToWelcomeIndexPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: searchFilterOwnersPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: submitNewPetPage
+[MASTER] 19:26:28.775 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: submitOwnerFormNewOwnerPage
+[MASTER] 19:26:28.777 [logback-1] INFO  PropertiesSearchAlgorithmFactory - Chosen search algorithm: MOSA
+[MASTER] 19:26:28.803 [logback-1] INFO  TestSuiteFitnessFunction - Total line coverage goals: [12, 15, 17, 19, 20, 24, 25, 26, 27, 28, 29, 30, 32, 34, 39, 40, 41, 42, 43, 44, 45, 47, 49, 54, 55, 56, 57, 58, 59, 60, 62, 64, 70, 71, 72, 73, 74, 75, 77, 78, 79, 81, 82, 84, 86, 91, 92, 93, 94, 95, 96, 98, 99, 100, 102, 103, 105, 107, 111, 112, 113, 114, 115, 116, 117, 119, 121, 125, 126, 127, 128, 129, 130, 131, 133, 135, 140, 141, 142, 143, 144, 145, 146, 148, 150, 152, 153, 155, 157, 162, 163, 164, 165, 166, 167, 169, 171, 173, 174, 176, 178, 182, 183, 184, 185, 186, 187, 188, 190, 192, 196, 197, 198, 199, 200, 201, 203, 204, 206, 207, 209, 211, 215, 216, 217, 218, 219, 220, 221, 223, 225, 229, 230, 231, 232, 233, 234, 235, 237, 239, 243, 244, 245, 246, 247, 248, 249, 251, 253, 257, 258, 259, 260, 261, 262, 263, 265, 267, 275, 276, 277, 279, 280, 281, 282, 284, 286, 293, 294, 295, 297, 298, 299, 300, 302, 304, 308, 309, 310, 311, 312, 313, 314, 316, 318, 322, 323, 324, 325, 326, 327, 328, 330, 332, 336, 337, 338, 339, 340, 341, 342, 344, 346]
+[MASTER] 19:26:28.809 [logback-1] INFO  LineCoverageFactory - Lines to cover list size: 20
+[MASTER] 19:26:28.810 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexVetsPage()V, Line 27.
+[MASTER] 19:26:28.814 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V, Line 42.
+[MASTER] 19:26:28.814 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V, Line 57.
+[MASTER] 19:26:28.814 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 74.
+[MASTER] 19:26:28.814 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 95.
+[MASTER] 19:26:28.814 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V, Line 114.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V, Line 128.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 145.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 166.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V, Line 185.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 200.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerIndexPage()V, Line 218.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersIndexPage()V, Line 232.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVetsIndexPage()V, Line 246.
+[MASTER] 19:26:28.815 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToWelcomeIndexPage()V, Line 260.
+[MASTER] 19:26:28.816 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 279.
+[MASTER] 19:26:28.816 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 297.
+[MASTER] 19:26:28.816 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexWelcomePage()V, Line 311.
+[MASTER] 19:26:28.816 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V, Line 325.
+[MASTER] 19:26:28.816 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersWelcomePage()V, Line 339.
+[MASTER] 19:26:28.821 [logback-1] INFO  TestSuiteFitnessFunction - Covering branches true: []
+[MASTER] 19:26:28.821 [logback-1] INFO  TestSuiteFitnessFunction - Covering branches false: []
+[MASTER] 19:26:28.821 [logback-1] INFO  TestSuiteFitnessFunction - Covering branches both: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+[MASTER] 19:26:28.824 [logback-1] INFO  PropertiesSearchAlgorithmFactory - Setting stopping condition: MAXTIME
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: editOwnerEditOwnerPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToVisitsOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexWelcomePage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: submitNewPetPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: formVisitsPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditOwnerOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnersWelcomePage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditPetThroughNameOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnerInformationOwnersPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: submitOwnerFormNewOwnerPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToNewOwnerIndexPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditPetThroghEditLinkOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexVetsPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToVetsIndexPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToNewOwnerWelcomePage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnersIndexPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToWelcomeIndexPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToAddNewPetOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: searchFilterOwnersPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####constructor: main.ClassUnderTestApogen
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: editOwnerEditOwnerPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: formVisitsPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToAddNewPetOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditOwnerOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditPetThroghEditLinkOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToEditPetThroughNameOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexOwnerInformationPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexVetsPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToIndexWelcomePage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToNewOwnerIndexPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToNewOwnerWelcomePage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnerInformationOwnersPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnersIndexPage
+[MASTER] 19:26:28.829 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToOwnersWelcomePage
+[MASTER] 19:26:28.830 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToVetsIndexPage
+[MASTER] 19:26:28.830 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToVisitsOwnerInformationPage
+[MASTER] 19:26:28.830 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: goToWelcomeIndexPage
+[MASTER] 19:26:28.830 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: searchFilterOwnersPage
+[MASTER] 19:26:28.830 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: submitNewPetPage
+[MASTER] 19:26:28.830 [logback-1] INFO  AllMethodsTestChromosomeFactory - ####method: submitOwnerFormNewOwnerPage
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Lines to cover list size: 20
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexVetsPage()V, Line 27.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V, Line 42.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V, Line 57.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 74.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 95.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V, Line 114.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V, Line 128.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 145.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 166.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V, Line 185.
+[MASTER] 19:26:28.830 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 200.
+[MASTER] 19:26:28.832 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerIndexPage()V, Line 218.
+[MASTER] 19:26:28.832 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersIndexPage()V, Line 232.
+[MASTER] 19:26:28.832 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVetsIndexPage()V, Line 246.
+[MASTER] 19:26:28.832 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToWelcomeIndexPage()V, Line 260.
+[MASTER] 19:26:28.832 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 279.
+[MASTER] 19:26:28.832 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 297.
+[MASTER] 19:26:28.832 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexWelcomePage()V, Line 311.
+[MASTER] 19:26:28.833 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V, Line 325.
+[MASTER] 19:26:28.833 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersWelcomePage()V, Line 339.
+* Total number of test goals for MOSA: 20
+[MASTER] 19:26:28.833 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Total_Goals = 20
+* Using seed 1561742785758
+* Starting evolution
+[MASTER] 19:26:28.834 [logback-1] INFO  ClientNodeImpl - Client changing state from INITIALIZATION to SEARCH
+[Progress:>                             0%] [Cov:>                                  0%][MASTER] 19:26:28.836 [logback-1] INFO  MOSA - executing generateSolution function
+[MASTER] 19:26:28.836 [logback-1] INFO  MOSA - executing initializePopulation function
+[MASTER] 19:26:28.839 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToNewOwnerWelcomePage, edge to add goToNewOwnerWelcomePage-WelcomePage-NewOwnerPage
+[MASTER] 19:26:28.870 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: formVisitsPage, edge to add formVisitsPage-VisitsPage-OwnerInformationPage
+[MASTER] 19:26:28.874 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditPetThroughNameOwnerInformationPage, edge to add goToEditPetThroughNameOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.881 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnerInformationOwnersPage, edge to add goToOwnerInformationOwnersPage-OwnersPage-OwnerInformationPage
+[MASTER] 19:26:28.881 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: submitOwnerFormNewOwnerPage, edge to add submitOwnerFormNewOwnerPage-NewOwnerPage-OwnersPage
+[MASTER] 19:26:28.885 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditOwnerOwnerInformationPage, edge to add goToEditOwnerOwnerInformationPage-OwnerInformationPage-EditOwnerPage
+[MASTER] 19:26:28.888 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: editOwnerEditOwnerPage, edge to add editOwnerEditOwnerPage-EditOwnerPage-OwnerInformationPage
+[MASTER] 19:26:28.890 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToIndexVetsPage, edge to add goToIndexVetsPage-VetsPage-IndexPage
+[MASTER] 19:26:28.890 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToIndexWelcomePage, edge to add goToIndexWelcomePage-WelcomePage-IndexPage
+[MASTER] 19:26:28.893 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToWelcomeIndexPage, edge to add goToWelcomeIndexPage-IndexPage-WelcomePage
+[MASTER] 19:26:28.894 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToIndexOwnerInformationPage, edge to add goToIndexOwnerInformationPage-OwnerInformationPage-IndexPage
+[MASTER] 19:26:28.895 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnersWelcomePage, edge to add goToOwnersWelcomePage-WelcomePage-OwnersPage
+[MASTER] 19:26:28.903 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToVisitsOwnerInformationPage, edge to add goToVisitsOwnerInformationPage-OwnerInformationPage-VisitsPage
+[MASTER] 19:26:28.905 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: searchFilterOwnersPage, edge to add searchFilterOwnersPage-OwnersPage-OwnersPage
+[MASTER] 19:26:28.909 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToVetsIndexPage, edge to add goToVetsIndexPage-IndexPage-VetsPage
+[MASTER] 19:26:28.911 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToNewOwnerIndexPage, edge to add goToNewOwnerIndexPage-IndexPage-NewOwnerPage
+[MASTER] 19:26:28.914 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditPetThroghEditLinkOwnerInformationPage, edge to add goToEditPetThroghEditLinkOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.915 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToAddNewPetOwnerInformationPage, edge to add goToAddNewPetOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.917 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: submitNewPetPage, edge to add submitNewPetPage-NewPetPage-OwnerInformationPage
+[MASTER] 19:26:28.919 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnersIndexPage, edge to add goToOwnersIndexPage-IndexPage-OwnersPage
+[MASTER] 19:26:28.920 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: editOwnerEditOwnerPage, edge to add editOwnerEditOwnerPage-EditOwnerPage-OwnerInformationPage
+[MASTER] 19:26:28.921 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: formVisitsPage, edge to add formVisitsPage-VisitsPage-OwnerInformationPage
+[MASTER] 19:26:28.923 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnersIndexPage, edge to add goToOwnersIndexPage-IndexPage-OwnersPage
+[MASTER] 19:26:28.923 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToNewOwnerIndexPage, edge to add goToNewOwnerIndexPage-IndexPage-NewOwnerPage
+[MASTER] 19:26:28.926 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnersWelcomePage, edge to add goToOwnersWelcomePage-WelcomePage-OwnersPage
+[MASTER] 19:26:28.928 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToIndexOwnerInformationPage, edge to add goToIndexOwnerInformationPage-OwnerInformationPage-IndexPage
+[MASTER] 19:26:28.931 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnerInformationOwnersPage, edge to add goToOwnerInformationOwnersPage-OwnersPage-OwnerInformationPage
+[MASTER] 19:26:28.932 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToVetsIndexPage, edge to add goToVetsIndexPage-IndexPage-VetsPage
+[MASTER] 19:26:28.933 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: submitOwnerFormNewOwnerPage, edge to add submitOwnerFormNewOwnerPage-NewOwnerPage-OwnersPage
+[MASTER] 19:26:28.935 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToIndexVetsPage, edge to add goToIndexVetsPage-VetsPage-IndexPage
+[MASTER] 19:26:28.938 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: searchFilterOwnersPage, edge to add searchFilterOwnersPage-OwnersPage-OwnersPage
+[MASTER] 19:26:28.939 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToNewOwnerWelcomePage, edge to add goToNewOwnerWelcomePage-WelcomePage-NewOwnerPage
+[MASTER] 19:26:28.940 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: submitNewPetPage, edge to add submitNewPetPage-NewPetPage-OwnerInformationPage
+[MASTER] 19:26:28.942 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToAddNewPetOwnerInformationPage, edge to add goToAddNewPetOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.944 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToVisitsOwnerInformationPage, edge to add goToVisitsOwnerInformationPage-OwnerInformationPage-VisitsPage
+[MASTER] 19:26:28.946 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditPetThroughNameOwnerInformationPage, edge to add goToEditPetThroughNameOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.950 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToIndexWelcomePage, edge to add goToIndexWelcomePage-WelcomePage-IndexPage
+[MASTER] 19:26:28.952 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditPetThroghEditLinkOwnerInformationPage, edge to add goToEditPetThroghEditLinkOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.956 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToWelcomeIndexPage, edge to add goToWelcomeIndexPage-IndexPage-WelcomePage
+[MASTER] 19:26:28.957 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditOwnerOwnerInformationPage, edge to add goToEditOwnerOwnerInformationPage-OwnerInformationPage-EditOwnerPage
+[MASTER] 19:26:28.960 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToNewOwnerWelcomePage, edge to add goToNewOwnerWelcomePage-WelcomePage-NewOwnerPage
+[MASTER] 19:26:28.963 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnersWelcomePage, edge to add goToOwnersWelcomePage-WelcomePage-OwnersPage
+[MASTER] 19:26:28.966 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditPetThroughNameOwnerInformationPage, edge to add goToEditPetThroughNameOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.967 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToOwnersIndexPage, edge to add goToOwnersIndexPage-IndexPage-OwnersPage
+[MASTER] 19:26:28.968 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: submitOwnerFormNewOwnerPage, edge to add submitOwnerFormNewOwnerPage-NewOwnerPage-OwnersPage
+[MASTER] 19:26:28.969 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToVisitsOwnerInformationPage, edge to add goToVisitsOwnerInformationPage-OwnerInformationPage-VisitsPage
+[MASTER] 19:26:28.970 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToWelcomeIndexPage, edge to add goToWelcomeIndexPage-IndexPage-WelcomePage
+[MASTER] 19:26:28.974 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToAddNewPetOwnerInformationPage, edge to add goToAddNewPetOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.976 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: searchFilterOwnersPage, edge to add searchFilterOwnersPage-OwnersPage-OwnersPage
+[MASTER] 19:26:28.978 [logback-1] INFO  AllMethodsTestChromosomeFactory - MethodToAdd: goToEditPetThroghEditLinkOwnerInformationPage, edge to add goToEditPetThroghEditLinkOwnerInformationPage-OwnerInformationPage-NewPetPage
+[MASTER] 19:26:28.983 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:26:28.986 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 2 (Client state: Search)
+[MASTER] 19:26:28.986 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:26:55.592 [logback-1] INFO  TestCaseExecutor - Test with Id 2 failed
+[MASTER] 19:26:55.593 [logback-1] INFO  TestCaseExecutor - Going to re-execute test with Id 2 using sleep timeout 150
+[MASTER] 19:26:55.593 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:00.423 [logback-1] INFO  TestCaseExecutor - Previous execution time [ms]: 26103; current execution time [ms]: 4804. Current execution time should be more or less 2250 units bigger than the previous execution time. The difference between the two is -21299
+[MASTER] 19:27:00.423 [logback-1] WARN  TestCaseExecutor - Previous execution time [ms] 26103 is bigger than current execution time [ms] 4804. It may be a problem!
+[Progress:===============>              51%] [Cov:=====>                             15%][MASTER] 19:27:00.518 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:00.519 [logback-1] INFO  ClientNodeImpl - Sending current best individual to master process
+[MASTER] 19:27:00.520 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 4 (Client state: Search)
+[MASTER] 19:27:00.520 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:02.690 [logback-1] INFO  TestCaseExecutor - Test with Id 4 succeeded
+[Progress:================>             55%] [Cov:========>                          25%][MASTER] 19:27:02.721 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:02.723 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 6 (Client state: Search)
+[MASTER] 19:27:02.723 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:04.440 [logback-1] INFO  TestCaseExecutor - Test with Id 6 succeeded
+[Progress:=================>            58%] [Cov:========>                          25%][MASTER] 19:27:04.607 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:04.607 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 8 (Client state: Search)
+[MASTER] 19:27:04.607 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:06.235 [logback-1] INFO  TestCaseExecutor - Test with Id 8 succeeded
+[Progress:==================>           61%] [Cov:============>                      35%][MASTER] 19:27:06.238 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:06.239 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 10 (Client state: Search)
+[MASTER] 19:27:06.239 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:08.023 [logback-1] INFO  TestCaseExecutor - Test with Id 10 succeeded
+[Progress:===================>          65%] [Cov:===============>                   45%][MASTER] 19:27:08.043 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:08.044 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 12 (Client state: Search)
+[MASTER] 19:27:08.044 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:09.385 [logback-1] INFO  TestCaseExecutor - Test with Id 12 succeeded
+[Progress:===================>          66%] [Cov:===============>                   45%][MASTER] 19:27:09.407 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:09.408 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 14 (Client state: Search)
+[MASTER] 19:27:09.408 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:13.248 [logback-1] INFO  TestCaseExecutor - Test with Id 14 succeeded
+[Progress:=====================>        73%] [Cov:======================>            65%][MASTER] 19:27:13.251 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:13.252 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 16 (Client state: Search)
+[MASTER] 19:27:13.252 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:13.696 [logback-1] INFO  TestCaseExecutor - Test with Id 16 succeeded
+[MASTER] 19:27:13.698 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:13.698 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 18 (Client state: Search)
+[MASTER] 19:27:13.698 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:18.839 [logback-1] INFO  TestCaseExecutor - Test with Id 18 succeeded
+[Progress:========================>     83%] [Cov:============================>      80%][MASTER] 19:27:18.854 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:18.855 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 20 (Client state: Search)
+[MASTER] 19:27:18.855 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:20.364 [logback-1] INFO  TestCaseExecutor - Test with Id 20 succeeded
+[Progress:=========================>    85%] [Cov:============================>      80%][MASTER] 19:27:20.367 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:20.367 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 22 (Client state: Search)
+[MASTER] 19:27:20.367 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:22.336 [logback-1] INFO  TestCaseExecutor - Test with Id 22 succeeded
+[Progress:==========================>   88%] [Cov:============================>      80%][MASTER] 19:27:22.339 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:27:22.340 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 24 (Client state: Search)
+[MASTER] 19:27:22.340 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:27:40.999 [logback-1] INFO  TestCaseExecutor - Test with Id 24 failed
+[MASTER] 19:27:40.999 [logback-1] INFO  TestCaseExecutor - Going to re-execute test with Id 24 using sleep timeout 150
+[MASTER] 19:27:40.999 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:28:01.733 [logback-1] INFO  TestCaseExecutor - Previous execution time [ms]: 18628; current execution time [ms]: 20706. Current execution time should be more or less 5550 units bigger than the previous execution time. The difference between the two is 2078
+[MASTER] 19:28:01.734 [logback-1] INFO  TestCaseExecutor - Going to re-execute test with Id 24 using sleep timeout 300
+[MASTER] 19:28:01.734 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:28:24.318 [logback-1] INFO  TestCaseExecutor - Previous execution time [ms]: 20706; current execution time [ms]: 22557. Current execution time should be more or less 11100 units bigger than the previous execution time. The difference between the two is 1851
+[Progress:==============================100%] [Cov:=================================> 95%][Progress:==============================100%] [Cov:=================================> 95%][MASTER] 19:28:24.501 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: TotalExceptionsTimeline = 0
+[MASTER] 19:28:24.503 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Time2MaxCoverage = 115676
+[MASTER] 19:28:24.504 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Statements_Executed = 275
+[MASTER] 19:28:24.504 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Tests_Executed = 16
+[MASTER] 19:28:24.504 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Generations = 0
+[MASTER] 19:28:24.504 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Fitness_Evaluations = 12
+[MASTER] 19:28:24.504 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: TotalExceptionsTimeline = 0
+
+* Search finished after 116s and 0 generations, 275 statements, best individual has fitness: 1.0
+[MASTER] 19:28:24.505 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Statements_Executed = 275
+[MASTER] 19:28:24.505 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Tests_Executed = 16
+[MASTER] 19:28:24.506 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Goals = 19
+[MASTER] 19:28:24.506 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Methods = 21
+[MASTER] 19:28:24.506 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branches = 36
+[MASTER] 19:28:24.506 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branchless_Methods = 1
+[MASTER] 19:28:24.506 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branches_Real = 25
+[MASTER] 19:28:24.506 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branches_Instrumented = 0
+[MASTER] 19:28:24.506 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Lines = [257, 258, 259, 260, 261, 262, 267, 12, 15, 17, 275, 19, 276, 20, 277, 279, 280, 24, 281, 25, 26, 282, 27, 28, 284, 29, 286, 34, 293, 294, 39, 295, 40, 41, 297, 42, 298, 43, 299, 44, 45, 47, 304, 49, 308, 309, 54, 310, 311, 55, 312, 56, 313, 57, 58, 59, 60, 62, 318, 64, 322, 323, 324, 325, 70, 326, 71, 327, 72, 73, 74, 75, 332, 77, 78, 79, 336, 81, 337, 338, 339, 340, 341, 86, 346, 91, 92, 93, 94, 95, 96, 98, 99, 100, 102, 107, 111, 112, 113, 114, 115, 116, 121, 125, 126, 127, 128, 129, 130, 135, 140, 141, 142, 148, 150, 153, 155, 162, 163, 164, 165, 166, 167, 169, 171, 173, 178, 182, 183, 184, 185, 186, 187, 188, 190, 192, 196, 197, 198, 199, 200, 201, 203, 204, 206, 207, 209, 211, 215, 216, 217, 218, 219, 220, 221, 223, 225, 229, 230, 231, 232, 233, 234, 239, 243, 244, 245, 246, 247, 248, 253]
+[MASTER] 19:28:24.509 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Explicit_MethodExceptions = 2
+[MASTER] 19:28:24.509 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Explicit_TypeExceptions = 1
+[MASTER] 19:28:24.509 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Implicit_MethodExceptions = 4
+[MASTER] 19:28:24.509 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Implicit_TypeExceptions = 1
+[MASTER] 19:28:24.509 [logback-1] INFO  ClientNodeImpl - Sending current best individual to master process
+[MASTER] 19:28:24.555 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AllPermission = 0
+[MASTER] 19:28:24.555 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SecurityPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: UnresolvedPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AWTPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: FilePermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SerializablePermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: ReflectPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: RuntimePermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: NetPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SocketPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SQLPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: PropertyPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: LoggingPermission = 0
+[MASTER] 19:28:24.556 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SSLPermission = 0
+[MASTER] 19:28:24.557 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AuthPermission = 0
+[MASTER] 19:28:24.557 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AudioPermission = 0
+[MASTER] 19:28:24.557 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: OtherPermission = 0
+[MASTER] 19:28:24.557 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Threads = 1
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Lines to cover list size: 20
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexVetsPage()V, Line 27.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V, Line 42.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V, Line 57.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 74.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 95.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V, Line 114.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V, Line 128.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 145.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 166.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V, Line 185.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 200.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerIndexPage()V, Line 218.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersIndexPage()V, Line 232.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVetsIndexPage()V, Line 246.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToWelcomeIndexPage()V, Line 260.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 279.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 297.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexWelcomePage()V, Line 311.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V, Line 325.
+[MASTER] 19:28:24.559 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersWelcomePage()V, Line 339.
+[MASTER] 19:28:24.560 [logback-1] INFO  ClientNodeImpl - Client changing state from SEARCH to MINIMIZATION
+[MASTER] 19:28:24.560 [logback-1] WARN  TimeController - Phase SEARCH lasted too long, 55 seconds more than allowed.
+* Minimizing test suite
+[MASTER] 19:28:24.564 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Result_Size = 4
+[MASTER] 19:28:24.564 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Result_Length = 156
+[MASTER] 19:28:24.564 [logback-1] INFO  TestSuiteMinimizer - Minimization Strategy: totallength, 4 tests
+[MASTER] 19:28:24.564 [logback-1] INFO  TestSuiteMinimizer - Minimizing per test
+[MASTER] 19:28:24.564 [logback-1] INFO  LineCoverageFactory - Lines to cover list size: 20
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexVetsPage()V, Line 27.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V, Line 42.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V, Line 57.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 74.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 95.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V, Line 114.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V, Line 128.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 145.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 166.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V, Line 185.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 200.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerIndexPage()V, Line 218.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersIndexPage()V, Line 232.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVetsIndexPage()V, Line 246.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToWelcomeIndexPage()V, Line 260.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 279.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 297.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexWelcomePage()V, Line 311.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V, Line 325.
+[MASTER] 19:28:24.565 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersWelcomePage()V, Line 339.
+[MASTER] 19:28:24.569 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297
+[MASTER] 19:28:24.569 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:28:24.570 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 4 (Client state: Minimizing)
+[MASTER] 19:28:24.570 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:28:26.098 [logback-1] INFO  TestCaseExecutor - Test with Id 4 succeeded
+[MASTER] 19:28:26.108 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:28:26.108 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 10 (Client state: Minimizing)
+[MASTER] 19:28:26.108 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:28:27.861 [logback-1] INFO  TestCaseExecutor - Test with Id 10 succeeded
+[MASTER] 19:28:27.876 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:28:27.876 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 18 (Client state: Minimizing)
+[MASTER] 19:28:27.876 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:28:31.593 [logback-1] INFO  TestCaseExecutor - Test with Id 18 succeeded
+[MASTER] 19:28:31.602 [logback-1] INFO  TestSuiteMinimizer - minimizeTests - test case with Id 18 covers goal main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297. Goal main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297 is covered by this test? true
+[MASTER] 19:28:31.602 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:28:31.603 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 24 (Client state: Minimizing)
+[MASTER] 19:28:31.603 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:28:42.457 [logback-1] INFO  TestCaseExecutor - Test with Id 24 succeeded
+[MASTER] 19:28:42.546 [logback-1] INFO  TestSuiteMinimizer - minimizeTests - test case with Id 24 covers goal main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297. Goal main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297 is covered by this test? true
+[MASTER] 19:28:42.550 [logback-1] INFO  TestCaseMinimizer - Minimizing selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToNewOwnerWelcomePage();
+FirstNames firstNames0 = FirstNames.BETTY;
+LastNames lastNames0 = LastNames.DAVIS;
+Addresses addresses0 = Addresses.CARDINAL;
+Cities cities0 = Cities.MCFARLAND;
+Telephones telephones0 = Telephones.PHONE1;
+classUnderTestApogen0.submitOwnerFormNewOwnerPage(firstNames0, lastNames0, addresses0, cities0, telephones0);
+classUnderTestApogen0.goToOwnerInformationOwnersPage(firstNames0, lastNames0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+LastNames lastNames1 = LastNames.FRANKLIN;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames0, lastNames1, addresses0, cities0, telephones0);
+PetNames petNames0 = PetNames.JEWEL;
+classUnderTestApogen0.goToEditPetThroghEditLinkOwnerInformationPage(petNames0);
+Dates dates0 = Dates.DATE2;
+PetTypes petTypes0 = PetTypes.HAMSTER;
+classUnderTestApogen0.submitNewPetPage(petNames0, dates0, petTypes0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+FirstNames firstNames1 = FirstNames.EDUARDO;
+Addresses addresses1 = Addresses.COMMERCE;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames1, addresses1, cities0, telephones0);
+classUnderTestApogen0.goToAddNewPetOwnerInformationPage();
+Dates dates1 = Dates.DATE4;
+classUnderTestApogen0.submitNewPetPage(petNames0, dates1, petTypes0);
+PetNames petNames1 = PetNames.ROSY;
+classUnderTestApogen0.goToVisitsOwnerInformationPage(petNames1);
+Dates dates2 = Dates.DATE1;
+VisitDescriptions visitDescriptions0 = VisitDescriptions.ONE;
+classUnderTestApogen0.formVisitsPage(dates2, visitDescriptions0);
+PetNames petNames2 = PetNames.LEO;
+classUnderTestApogen0.goToEditPetThroghEditLinkOwnerInformationPage(petNames2);
+PetNames petNames3 = PetNames.LEO;
+Dates dates3 = Dates.DATE1;
+classUnderTestApogen0.submitNewPetPage(petNames3, dates3, petTypes0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+LastNames lastNames2 = LastNames.RODRIQUEZ;
+Cities cities1 = Cities.MADISON;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames2, addresses1, cities1, telephones0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+Telephones telephones1 = Telephones.PHONE3;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames0, lastNames0, addresses1, cities1, telephones1);
+classUnderTestApogen0.goToAddNewPetOwnerInformationPage();
+classUnderTestApogen0.submitNewPetPage(petNames3, dates1, petTypes0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+LastNames lastNames3 = LastNames.RODRIQUEZ;
+Addresses addresses2 = Addresses.COMMERCE;
+Cities cities2 = Cities.MONONA;
+Telephones telephones2 = Telephones.PHONE2;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames3, addresses2, cities2, telephones2);
+PetNames petNames4 = PetNames.BASIL;
+classUnderTestApogen0.goToEditPetThroughNameOwnerInformationPage(petNames4);
+PetNames petNames5 = PetNames.BASIL;
+Dates dates4 = Dates.DATE3;
+PetTypes petTypes1 = PetTypes.DOG;
+classUnderTestApogen0.submitNewPetPage(petNames5, dates4, petTypes1);
+classUnderTestApogen0.goToEditPetThroughNameOwnerInformationPage(petNames2);
+PetNames petNames6 = PetNames.LEO;
+PetTypes petTypes2 = PetTypes.LIZARD;
+classUnderTestApogen0.submitNewPetPage(petNames6, dates2, petTypes2);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+Addresses addresses3 = Addresses.COMMERCE;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames0, addresses3, cities1, telephones2);
+classUnderTestApogen0.goToVisitsOwnerInformationPage(petNames2);
+Dates dates5 = Dates.DATE3;
+VisitDescriptions visitDescriptions1 = VisitDescriptions.TWO;
+classUnderTestApogen0.formVisitsPage(dates5, visitDescriptions1);
+classUnderTestApogen0.goToEditPetThroghEditLinkOwnerInformationPage(petNames5);
+PetNames petNames7 = PetNames.ROSY;
+PetTypes petTypes3 = PetTypes.HAMSTER;
+classUnderTestApogen0.submitNewPetPage(petNames7, dates2, petTypes3);
+classUnderTestApogen0.goToIndexOwnerInformationPage();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToOwnersWelcomePage();
+
+[MASTER] 19:28:42.566 [logback-1] INFO  TestCaseMinimizer - Minimized selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToNewOwnerWelcomePage();
+FirstNames firstNames0 = FirstNames.BETTY;
+LastNames lastNames0 = LastNames.DAVIS;
+Addresses addresses0 = Addresses.CARDINAL;
+Cities cities0 = Cities.MCFARLAND;
+Telephones telephones0 = Telephones.PHONE1;
+classUnderTestApogen0.submitOwnerFormNewOwnerPage(firstNames0, lastNames0, addresses0, cities0, telephones0);
+classUnderTestApogen0.goToOwnerInformationOwnersPage(firstNames0, lastNames0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+LastNames lastNames1 = LastNames.FRANKLIN;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames0, lastNames1, addresses0, cities0, telephones0);
+PetNames petNames0 = PetNames.JEWEL;
+PetTypes petTypes0 = PetTypes.HAMSTER;
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+FirstNames firstNames1 = FirstNames.EDUARDO;
+Addresses addresses1 = Addresses.COMMERCE;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames1, addresses1, cities0, telephones0);
+classUnderTestApogen0.goToAddNewPetOwnerInformationPage();
+Dates dates0 = Dates.DATE4;
+classUnderTestApogen0.submitNewPetPage(petNames0, dates0, petTypes0);
+Dates dates1 = Dates.DATE1;
+PetNames petNames1 = PetNames.LEO;
+PetNames petNames2 = PetNames.LEO;
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+LastNames lastNames2 = LastNames.RODRIQUEZ;
+Cities cities1 = Cities.MADISON;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames2, addresses1, cities1, telephones0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+Telephones telephones1 = Telephones.PHONE3;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames0, lastNames0, addresses1, cities1, telephones1);
+classUnderTestApogen0.goToAddNewPetOwnerInformationPage();
+classUnderTestApogen0.submitNewPetPage(petNames2, dates0, petTypes0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+LastNames lastNames3 = LastNames.RODRIQUEZ;
+Addresses addresses2 = Addresses.COMMERCE;
+Cities cities2 = Cities.MONONA;
+Telephones telephones2 = Telephones.PHONE2;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames3, addresses2, cities2, telephones2);
+classUnderTestApogen0.goToEditPetThroughNameOwnerInformationPage(petNames1);
+PetNames petNames3 = PetNames.LEO;
+PetTypes petTypes1 = PetTypes.LIZARD;
+classUnderTestApogen0.submitNewPetPage(petNames3, dates1, petTypes1);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+Addresses addresses3 = Addresses.COMMERCE;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames1, lastNames0, addresses3, cities1, telephones2);
+classUnderTestApogen0.goToVisitsOwnerInformationPage(petNames1);
+Dates dates2 = Dates.DATE3;
+VisitDescriptions visitDescriptions0 = VisitDescriptions.TWO;
+classUnderTestApogen0.formVisitsPage(dates2, visitDescriptions0);
+classUnderTestApogen0.goToIndexOwnerInformationPage();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToOwnersWelcomePage();
+
+[MASTER] 19:28:42.566 [logback-1] INFO  TestCaseMinimizer - Executing minimized selenium test case to get its fitness
+[MASTER] 19:28:42.566 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:28:42.566 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 148 (Client state: Minimizing)
+[MASTER] 19:28:42.566 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:28:57.778 [logback-1] INFO  TestCaseExecutor - Test with Id 148 failed
+[MASTER] 19:28:57.778 [logback-1] INFO  TestCaseExecutor - Going to re-execute test with Id 148 using sleep timeout 150
+[MASTER] 19:28:57.778 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:17.097 [logback-1] INFO  TestCaseExecutor - Previous execution time [ms]: 15175; current execution time [ms]: 19290. Current execution time should be more or less 4050 units bigger than the previous execution time. The difference between the two is 4115
+[MASTER] 19:29:17.098 [logback-1] INFO  TestCaseExecutor - Going to re-execute test with Id 148 using sleep timeout 300
+[MASTER] 19:29:17.098 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:37.450 [logback-1] INFO  TestCaseExecutor - Previous execution time [ms]: 19290; current execution time [ms]: 20327. Current execution time should be more or less 8100 units bigger than the previous execution time. The difference between the two is 1037
+[MASTER] 19:29:37.490 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297
+[MASTER] 19:29:37.490 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V: Line 57
+[MASTER] 19:29:37.490 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V: Line 114
+[MASTER] 19:29:37.490 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V: Line 128
+[MASTER] 19:29:37.490 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 166
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V: Line 185
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V: Line 325
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 74
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToOwnersWelcomePage()V: Line 339
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 200
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToWelcomeIndexPage()V: Line 260
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V: Line 42
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 279
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteWriter - Adding new test case:
+[MASTER] 19:29:37.491 [logback-1] INFO  TestSuiteMinimizer - After new test the suite covers 13/20 goals
+[MASTER] 19:29:37.493 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V: Line 57
+[MASTER] 19:29:37.493 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V: Line 57
+[MASTER] 19:29:37.493 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V: Line 57
+[MASTER] 19:29:37.493 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 13/20 goals
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V: Line 114
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V: Line 114
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V: Line 114
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 13/20 goals
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V: Line 128
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V: Line 128
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V: Line 128
+[MASTER] 19:29:37.494 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 13/20 goals
+[MASTER] 19:29:37.495 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 145
+[MASTER] 19:29:37.495 [logback-1] INFO  TestSuiteMinimizer - Goal is not covered: main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 145
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 166
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 166
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 166
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 13/20 goals
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V: Line 185
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V: Line 185
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V: Line 185
+[MASTER] 19:29:37.496 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 13/20 goals
+[MASTER] 19:29:37.497 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27
+[MASTER] 19:29:37.497 [logback-1] INFO  TestSuiteMinimizer - minimizeTests - test case with Id 4 covers goal main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27. Goal main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27 is covered by this test? true
+[MASTER] 19:29:37.497 [logback-1] INFO  TestSuiteMinimizer - minimizeTests - test case with Id 10 covers goal main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27. Goal main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27 is covered by this test? true
+[MASTER] 19:29:37.498 [logback-1] INFO  TestCaseMinimizer - Minimizing selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToVetsIndexPage();
+classUnderTestApogen0.goToIndexVetsPage();
+classUnderTestApogen0.goToNewOwnerIndexPage();
+FirstNames firstNames0 = FirstNames.BETTY;
+LastNames lastNames0 = LastNames.BLACK;
+Addresses addresses0 = Addresses.FRIENDLY;
+Cities cities0 = Cities.MADISON;
+Telephones telephones0 = Telephones.PHONE3;
+classUnderTestApogen0.submitOwnerFormNewOwnerPage(firstNames0, lastNames0, addresses0, cities0, telephones0);
+FirstNames firstNames1 = FirstNames.BETTY;
+classUnderTestApogen0.searchFilterOwnersPage(firstNames1, lastNames0);
+classUnderTestApogen0.searchFilterOwnersPage(firstNames0, lastNames0);
+LastNames lastNames1 = LastNames.RODRIQUEZ;
+classUnderTestApogen0.goToOwnerInformationOwnersPage(firstNames1, lastNames1);
+PetNames petNames0 = PetNames.ROSY;
+classUnderTestApogen0.goToEditPetThroghEditLinkOwnerInformationPage(petNames0);
+PetNames petNames1 = PetNames.LEO;
+Dates dates0 = Dates.DATE3;
+PetTypes petTypes0 = PetTypes.HAMSTER;
+classUnderTestApogen0.submitNewPetPage(petNames1, dates0, petTypes0);
+classUnderTestApogen0.goToVisitsOwnerInformationPage(petNames1);
+VisitDescriptions visitDescriptions0 = VisitDescriptions.TWO;
+classUnderTestApogen0.formVisitsPage(dates0, visitDescriptions0);
+
+[MASTER] 19:29:37.500 [logback-1] INFO  TestCaseMinimizer - Minimized selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToVetsIndexPage();
+classUnderTestApogen0.goToIndexVetsPage();
+classUnderTestApogen0.goToNewOwnerIndexPage();
+FirstNames firstNames0 = FirstNames.BETTY;
+LastNames lastNames0 = LastNames.BLACK;
+Addresses addresses0 = Addresses.FRIENDLY;
+Cities cities0 = Cities.MADISON;
+Telephones telephones0 = Telephones.PHONE3;
+classUnderTestApogen0.submitOwnerFormNewOwnerPage(firstNames0, lastNames0, addresses0, cities0, telephones0);
+FirstNames firstNames1 = FirstNames.BETTY;
+classUnderTestApogen0.searchFilterOwnersPage(firstNames1, lastNames0);
+classUnderTestApogen0.searchFilterOwnersPage(firstNames0, lastNames0);
+
+[MASTER] 19:29:37.500 [logback-1] INFO  TestCaseMinimizer - Executing minimized selenium test case to get its fitness
+[MASTER] 19:29:37.500 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:29:37.501 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 164 (Client state: Minimizing)
+[MASTER] 19:29:37.501 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:38.989 [logback-1] INFO  TestCaseExecutor - Test with Id 164 succeeded
+[MASTER] 19:29:38.993 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27
+[MASTER] 19:29:38.994 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToNewOwnerIndexPage()V: Line 218
+[MASTER] 19:29:38.994 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToVetsIndexPage()V: Line 246
+[MASTER] 19:29:38.994 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 95
+[MASTER] 19:29:38.994 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 279
+[MASTER] 19:29:38.994 [logback-1] INFO  TestSuiteWriter - Adding new test case:
+[MASTER] 19:29:38.994 [logback-1] INFO  TestSuiteMinimizer - After new test the suite covers 17/20 goals
+[MASTER] 19:29:38.997 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311
+[MASTER] 19:29:38.998 [logback-1] INFO  TestSuiteMinimizer - minimizeTests - test case with Id 10 covers goal main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311. Goal main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311 is covered by this test? true
+[MASTER] 19:29:38.998 [logback-1] INFO  TestSuiteMinimizer - minimizeTests - test case with Id 18 covers goal main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311. Goal main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311 is covered by this test? true
+[MASTER] 19:29:38.998 [logback-1] INFO  TestCaseMinimizer - Minimizing selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToNewOwnerIndexPage();
+FirstNames firstNames0 = FirstNames.BETTY;
+LastNames lastNames0 = LastNames.BLACK;
+Addresses addresses0 = Addresses.COMMERCE;
+Cities cities0 = Cities.MONONA;
+Telephones telephones0 = Telephones.PHONE2;
+classUnderTestApogen0.submitOwnerFormNewOwnerPage(firstNames0, lastNames0, addresses0, cities0, telephones0);
+classUnderTestApogen0.searchFilterOwnersPage(firstNames0, lastNames0);
+classUnderTestApogen0.searchFilterOwnersPage(firstNames0, lastNames0);
+FirstNames firstNames1 = FirstNames.BETTY;
+classUnderTestApogen0.searchFilterOwnersPage(firstNames1, lastNames0);
+classUnderTestApogen0.goToOwnerInformationOwnersPage(firstNames1, lastNames0);
+PetNames petNames0 = PetNames.LEO;
+classUnderTestApogen0.goToEditPetThroghEditLinkOwnerInformationPage(petNames0);
+Dates dates0 = Dates.DATE2;
+PetTypes petTypes0 = PetTypes.BIRD;
+classUnderTestApogen0.submitNewPetPage(petNames0, dates0, petTypes0);
+classUnderTestApogen0.goToAddNewPetOwnerInformationPage();
+PetNames petNames1 = PetNames.ROSY;
+classUnderTestApogen0.submitNewPetPage(petNames1, dates0, petTypes0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+FirstNames firstNames2 = FirstNames.BETTY;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames2, lastNames0, addresses0, cities0, telephones0);
+classUnderTestApogen0.goToIndexOwnerInformationPage();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToIndexWelcomePage();
+
+[MASTER] 19:29:39.001 [logback-1] INFO  TestCaseMinimizer - Minimized selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToNewOwnerIndexPage();
+FirstNames firstNames0 = FirstNames.BETTY;
+LastNames lastNames0 = LastNames.BLACK;
+Addresses addresses0 = Addresses.COMMERCE;
+Cities cities0 = Cities.MONONA;
+Telephones telephones0 = Telephones.PHONE2;
+classUnderTestApogen0.submitOwnerFormNewOwnerPage(firstNames0, lastNames0, addresses0, cities0, telephones0);
+classUnderTestApogen0.searchFilterOwnersPage(firstNames0, lastNames0);
+classUnderTestApogen0.searchFilterOwnersPage(firstNames0, lastNames0);
+FirstNames firstNames1 = FirstNames.BETTY;
+classUnderTestApogen0.searchFilterOwnersPage(firstNames1, lastNames0);
+classUnderTestApogen0.goToOwnerInformationOwnersPage(firstNames1, lastNames0);
+Dates dates0 = Dates.DATE2;
+PetTypes petTypes0 = PetTypes.BIRD;
+classUnderTestApogen0.goToAddNewPetOwnerInformationPage();
+PetNames petNames0 = PetNames.ROSY;
+classUnderTestApogen0.submitNewPetPage(petNames0, dates0, petTypes0);
+classUnderTestApogen0.goToEditOwnerOwnerInformationPage();
+FirstNames firstNames2 = FirstNames.BETTY;
+classUnderTestApogen0.editOwnerEditOwnerPage(firstNames2, lastNames0, addresses0, cities0, telephones0);
+classUnderTestApogen0.goToIndexOwnerInformationPage();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToIndexWelcomePage();
+
+[MASTER] 19:29:39.001 [logback-1] INFO  TestCaseMinimizer - Executing minimized selenium test case to get its fitness
+[MASTER] 19:29:39.001 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:29:39.002 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 176 (Client state: Minimizing)
+[MASTER] 19:29:39.002 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:42.726 [logback-1] INFO  TestCaseExecutor - Test with Id 176 succeeded
+[MASTER] 19:29:42.738 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297
+[MASTER] 19:29:42.738 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V: Line 114
+[MASTER] 19:29:42.738 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V: Line 128
+[MASTER] 19:29:42.738 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V: Line 185
+[MASTER] 19:29:42.738 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311
+[MASTER] 19:29:42.738 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToNewOwnerIndexPage()V: Line 218
+[MASTER] 19:29:42.738 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 74
+[MASTER] 19:29:42.739 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToWelcomeIndexPage()V: Line 260
+[MASTER] 19:29:42.739 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 95
+[MASTER] 19:29:42.739 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V: Line 42
+[MASTER] 19:29:42.739 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 279
+[MASTER] 19:29:42.739 [logback-1] INFO  TestSuiteWriter - Adding new test case:
+[MASTER] 19:29:42.739 [logback-1] INFO  TestSuiteMinimizer - After new test the suite covers 18/20 goals
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToNewOwnerIndexPage()V: Line 218
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToNewOwnerIndexPage()V: Line 218
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToNewOwnerIndexPage()V: Line 218
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 18/20 goals
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V: Line 325
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V: Line 325
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V: Line 325
+[MASTER] 19:29:42.740 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 18/20 goals
+[MASTER] 19:29:42.741 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 74
+[MASTER] 19:29:42.741 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 74
+[MASTER] 19:29:42.741 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 74
+[MASTER] 19:29:42.741 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 18/20 goals
+[MASTER] 19:29:42.742 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToOwnersIndexPage()V: Line 232
+[MASTER] 19:29:42.742 [logback-1] INFO  TestSuiteMinimizer - minimizeTests - test case with Id 10 covers goal main.ClassUnderTestApogen.goToOwnersIndexPage()V: Line 232. Goal main.ClassUnderTestApogen.goToOwnersIndexPage()V: Line 232 is covered by this test? true
+[MASTER] 19:29:42.742 [logback-1] INFO  TestCaseMinimizer - Minimizing selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToIndexWelcomePage();
+classUnderTestApogen0.goToVetsIndexPage();
+classUnderTestApogen0.goToIndexVetsPage();
+classUnderTestApogen0.goToVetsIndexPage();
+classUnderTestApogen0.goToIndexVetsPage();
+classUnderTestApogen0.goToOwnersIndexPage();
+FirstNames firstNames0 = FirstNames.EDUARDO;
+LastNames lastNames0 = LastNames.FRANKLIN;
+classUnderTestApogen0.searchFilterOwnersPage(firstNames0, lastNames0);
+FirstNames firstNames1 = FirstNames.GEORGE;
+classUnderTestApogen0.searchFilterOwnersPage(firstNames1, lastNames0);
+FirstNames firstNames2 = FirstNames.HAROLD;
+classUnderTestApogen0.goToOwnerInformationOwnersPage(firstNames2, lastNames0);
+PetNames petNames0 = PetNames.ROSY;
+classUnderTestApogen0.goToEditPetThroghEditLinkOwnerInformationPage(petNames0);
+Dates dates0 = Dates.DATE1;
+PetTypes petTypes0 = PetTypes.CAT;
+classUnderTestApogen0.submitNewPetPage(petNames0, dates0, petTypes0);
+classUnderTestApogen0.goToEditPetThroghEditLinkOwnerInformationPage(petNames0);
+PetNames petNames1 = PetNames.JEWEL;
+Dates dates1 = Dates.DATE2;
+classUnderTestApogen0.submitNewPetPage(petNames1, dates1, petTypes0);
+classUnderTestApogen0.goToIndexOwnerInformationPage();
+classUnderTestApogen0.goToNewOwnerIndexPage();
+LastNames lastNames1 = LastNames.DAVIS;
+Addresses addresses0 = Addresses.CARDINAL;
+Cities cities0 = Cities.MONONA;
+Telephones telephones0 = Telephones.PHONE2;
+classUnderTestApogen0.submitOwnerFormNewOwnerPage(firstNames2, lastNames1, addresses0, cities0, telephones0);
+
+[MASTER] 19:29:42.745 [logback-1] INFO  TestCaseMinimizer - Minimized selenium test case: 
+ ClassUnderTestApogen classUnderTestApogen0 = new ClassUnderTestApogen();
+classUnderTestApogen0.goToWelcomeIndexPage();
+classUnderTestApogen0.goToIndexWelcomePage();
+classUnderTestApogen0.goToVetsIndexPage();
+classUnderTestApogen0.goToIndexVetsPage();
+classUnderTestApogen0.goToVetsIndexPage();
+classUnderTestApogen0.goToIndexVetsPage();
+classUnderTestApogen0.goToOwnersIndexPage();
+
+[MASTER] 19:29:42.745 [logback-1] INFO  TestCaseMinimizer - Executing minimized selenium test case to get its fitness
+[MASTER] 19:29:42.745 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:29:42.745 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 188 (Client state: Minimizing)
+[MASTER] 19:29:42.746 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:44.400 [logback-1] INFO  TestCaseExecutor - Test with Id 188 succeeded
+[MASTER] 19:29:44.402 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27
+[MASTER] 19:29:44.402 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311
+[MASTER] 19:29:44.402 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToOwnersIndexPage()V: Line 232
+[MASTER] 19:29:44.402 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToVetsIndexPage()V: Line 246
+[MASTER] 19:29:44.402 [logback-1] INFO  TestSuiteMinimizer - Goal covered by minimized test: main.ClassUnderTestApogen.goToWelcomeIndexPage()V: Line 260
+[MASTER] 19:29:44.402 [logback-1] INFO  TestSuiteWriter - Adding new test case:
+[MASTER] 19:29:44.402 [logback-1] INFO  TestSuiteMinimizer - After new test the suite covers 19/20 goals
+[MASTER] 19:29:44.403 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToOwnersWelcomePage()V: Line 339
+[MASTER] 19:29:44.403 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToOwnersWelcomePage()V: Line 339
+[MASTER] 19:29:44.403 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToOwnersWelcomePage()V: Line 339
+[MASTER] 19:29:44.403 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 19/20 goals
+[MASTER] 19:29:44.404 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToVetsIndexPage()V: Line 246
+[MASTER] 19:29:44.404 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToVetsIndexPage()V: Line 246
+[MASTER] 19:29:44.404 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToVetsIndexPage()V: Line 246
+[MASTER] 19:29:44.404 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 19/20 goals
+[MASTER] 19:29:44.406 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 200
+[MASTER] 19:29:44.406 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 200
+[MASTER] 19:29:44.406 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 200
+[MASTER] 19:29:44.406 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 19/20 goals
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.goToWelcomeIndexPage()V: Line 260
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.goToWelcomeIndexPage()V: Line 260
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.goToWelcomeIndexPage()V: Line 260
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 19/20 goals
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 95
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 95
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 95
+[MASTER] 19:29:44.407 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 19/20 goals
+[MASTER] 19:29:44.408 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V: Line 42
+[MASTER] 19:29:44.408 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V: Line 42
+[MASTER] 19:29:44.408 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V: Line 42
+[MASTER] 19:29:44.408 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 19/20 goals
+[MASTER] 19:29:44.409 [logback-1] INFO  TestSuiteMinimizer - Considering goal: main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 279
+[MASTER] 19:29:44.409 [logback-1] INFO  TestSuiteMinimizer - Covered by minimized test: main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 279
+[MASTER] 19:29:44.409 [logback-1] INFO  TestSuiteMinimizer - Already covered: main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 279
+[MASTER] 19:29:44.409 [logback-1] INFO  TestSuiteMinimizer - Now the suite covers 19/20 goals
+[MASTER] 19:29:44.409 [logback-1] INFO  TestSuiteMinimizer - Minimized suite covers 19/20 goals
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Lines to cover list size: 20
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexVetsPage()V, Line 27.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V, Line 42.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V, Line 57.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 74.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 95.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V, Line 114.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V, Line 128.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 145.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 166.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V, Line 185.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 200.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerIndexPage()V, Line 218.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersIndexPage()V, Line 232.
+[MASTER] 19:29:44.409 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVetsIndexPage()V, Line 246.
+[MASTER] 19:29:44.410 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToWelcomeIndexPage()V, Line 260.
+[MASTER] 19:29:44.410 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 279.
+[MASTER] 19:29:44.410 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 297.
+[MASTER] 19:29:44.410 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexWelcomePage()V, Line 311.
+[MASTER] 19:29:44.410 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V, Line 325.
+[MASTER] 19:29:44.410 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersWelcomePage()V, Line 339.
+[MASTER] 19:29:44.410 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:29:44.410 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 188 (Client state: Minimizing)
+[MASTER] 19:29:44.410 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:46.102 [logback-1] INFO  TestCaseExecutor - Test with Id 188 succeeded
+[MASTER] 19:29:46.103 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:29:46.103 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 176 (Client state: Minimizing)
+[MASTER] 19:29:46.103 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:48.576 [logback-1] INFO  TestCaseExecutor - Test with Id 176 failed
+[MASTER] 19:29:48.576 [logback-1] INFO  TestCaseExecutor - Going to re-execute test with Id 176 using sleep timeout 150
+[MASTER] 19:29:48.576 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:54.254 [logback-1] INFO  TestCaseExecutor - Previous execution time [ms]: 2456; current execution time [ms]: 5652. Current execution time should be more or less 1950 units bigger than the previous execution time. The difference between the two is 3196
+[MASTER] 19:29:54.263 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:29:54.263 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 164 (Client state: Minimizing)
+[MASTER] 19:29:54.263 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:29:55.593 [logback-1] INFO  TestCaseExecutor - Test with Id 164 succeeded
+[MASTER] 19:29:55.595 [logback-1] INFO  TestCaseExecutor - Executing test
+[MASTER] 19:29:55.595 [logback-1] INFO  TestCaseExecutor - Executing test. Id: 148 (Client state: Minimizing)
+[MASTER] 19:29:55.595 [logback-1] INFO  TestCaseExecutor - Reset application state
+[MASTER] 19:30:06.807 [logback-1] INFO  TestCaseExecutor - Test with Id 148 succeeded
+[MASTER] 19:30:06.845 [logback-1] INFO  TestSuiteMinimizer - Setting coverage to: 0.95
+[MASTER] 19:30:06.846 [logback-1] INFO  TestSuiteMinimizer - Failed to cover: main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 145
+[MASTER] 19:30:06.846 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Minimized_Size = 3
+[MASTER] 19:30:06.846 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Minimized_Length = 86
+[MASTER] 19:30:06.846 [logback-1] INFO  ClientNodeImpl - Client changing state from MINIMIZATION to COVERAGE_ANALYSIS
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Lines to cover list size: 20
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexVetsPage()V, Line 27.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V, Line 42.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V, Line 57.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 74.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V, Line 95.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V, Line 114.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V, Line 128.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 145.
+[MASTER] 19:30:06.848 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 166.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V, Line 185.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V, Line 200.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerIndexPage()V, Line 218.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersIndexPage()V, Line 232.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToVetsIndexPage()V, Line 246.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToWelcomeIndexPage()V, Line 260.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 279.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V, Line 297.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToIndexWelcomePage()V, Line 311.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V, Line 325.
+[MASTER] 19:30:06.849 [logback-1] INFO  LineCoverageFactory - Adding goal for method main.ClassUnderTestApogen.goToOwnersWelcomePage()V, Line 339.
+ - Missed goal main.ClassUnderTestApogen.goToEditPetThroghEditLinkOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 145
+[MASTER] 19:30:06.849 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: CoverageBitString = 11110111111111111111
+[MASTER] 19:30:06.850 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: LineCoverageBitString = 11110111111111111111
+[MASTER] 19:30:06.850 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: LineCoverage = 0.95
+* Coverage of criterion LINE: 95%
+* Total number of goals: 20
+* Number of covered goals: 19
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Goals = 19
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Methods = 20
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branches = 23
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branchless_Methods = 1
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branches_Real = 23
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Branches_Instrumented = 0
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Covered_Lines = [257, 258, 259, 260, 261, 262, 267, 12, 15, 17, 275, 19, 276, 20, 277, 279, 280, 24, 281, 25, 26, 27, 28, 29, 286, 34, 293, 294, 39, 295, 40, 41, 297, 42, 298, 43, 299, 44, 304, 49, 308, 309, 54, 310, 55, 311, 56, 312, 57, 313, 58, 59, 318, 64, 322, 323, 324, 325, 70, 326, 71, 327, 72, 73, 74, 75, 332, 336, 81, 337, 338, 339, 340, 341, 86, 346, 91, 92, 93, 94, 95, 96, 102, 107, 111, 112, 113, 114, 115, 116, 121, 125, 126, 127, 128, 129, 130, 135, 162, 163, 164, 165, 166, 167, 173, 178, 182, 183, 184, 185, 186, 187, 192, 196, 197, 198, 199, 200, 201, 206, 211, 215, 216, 217, 218, 219, 220, 225, 229, 230, 231, 232, 233, 234, 239, 243, 244, 245, 246, 247, 248, 253]
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Explicit_MethodExceptions = 0
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Explicit_TypeExceptions = 0
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Implicit_MethodExceptions = 0
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Implicit_TypeExceptions = 0
+[MASTER] 19:30:06.851 [logback-1] INFO  ClientNodeImpl - Sending current best individual to master process
+* Generated 3 tests with total length 86
+* Resulting test suite's coverage: 95%
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: IntegerOnlyConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: RealOnlyConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: StringOnlyConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: IntegerAndRealConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: IntegerAndStringConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: RealAndStringConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: IntegerRealAndStringConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: TotalNumberOfConstraints = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: NumberOfSATQueries = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: NumberOfUNSATQueries = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: NumberOfTimeoutQueries = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: NumberOfUsefulNewTests = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: NumberOfUnusefulNewTests = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AllPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SecurityPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: UnresolvedPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AWTPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: FilePermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SerializablePermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: ReflectPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: RuntimePermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: NetPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SocketPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SQLPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: PropertyPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: LoggingPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: SSLPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AuthPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: AudioPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: OtherPermission = 0
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Sending output variable to master process: Threads = 1
+[MASTER] 19:30:06.871 [logback-1] INFO  ClientNodeImpl - Client changing state from COVERAGE_ANALYSIS to WRITING_TESTS
+[MASTER] 19:30:06.873 [logback-1] INFO  TestSuiteWriter - Adding new test case:
+[MASTER] 19:30:06.873 [logback-1] INFO  TestSuiteWriter - Adding new test case:
+[MASTER] 19:30:06.873 [logback-1] INFO  TestSuiteWriter - Adding new test case:
+* Writing JUnit test case 'ClassUnderTestApogen_ESTest' to /Users/matteobiagiola/Desktop/testpetclinicMosa_0
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.editOwnerEditOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 297
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.formVisitsPage(Lcustom_classes/Dates;Lcustom_classes/VisitDescriptions;)V: Line 57
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToAddNewPetOwnerInformationPage()V: Line 114
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToEditOwnerOwnerInformationPage()V: Line 128
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToEditPetThroughNameOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 166
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToIndexOwnerInformationPage()V: Line 185
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToNewOwnerWelcomePage()V: Line 325
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToOwnerInformationOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 74
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToOwnersWelcomePage()V: Line 339
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToVisitsOwnerInformationPage(Lcustom_classes/PetNames;)V: Line 200
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToWelcomeIndexPage()V: Line 260
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.submitNewPetPage(Lcustom_classes/PetNames;Lcustom_classes/Dates;Lcustom_classes/PetTypes;)V: Line 42
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.submitOwnerFormNewOwnerPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;Lcustom_classes/Addresses;Lcustom_classes/Cities;Lcustom_classes/Telephones;)V: Line 279
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToIndexWelcomePage()V: Line 311
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToNewOwnerIndexPage()V: Line 218
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.searchFilterOwnersPage(Lcustom_classes/FirstNames;Lcustom_classes/LastNames;)V: Line 95
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToIndexVetsPage()V: Line 27
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToOwnersIndexPage()V: Line 232
+
+[MASTER] 19:30:06.917 [logback-1] INFO  TestSuiteWriter - Covered goal___main.ClassUnderTestApogen.goToVetsIndexPage()V: Line 246
+
+[MASTER] 19:30:07.222 [logback-1] INFO  ClientNodeImpl - Client changing state from WRITING_TESTS to WRITING_STATISTICS
+* Done!
+
+[MASTER] 19:30:07.254 [logback-1] INFO  ClientNodeImpl - Client changing state from WRITING_STATISTICS to DONE
+[MASTER] 19:30:07.255 [logback-1] INFO  ClientNodeImpl - Client changing state from DONE to FINISHED
+* Computation finished

@@ -6,11 +6,16 @@ import custom_classes.*;
 
 import po_utils.NotInTheRightPageObjectException;
 import po_utils.NotTheRightInputValuesException;
+import po_utils.ResetAppState;
 
 public class ClassUnderTest {
 
 	private Object currentPage = null;
 	private WebDriver driver;
+
+	public ClassUnderTest(WebDriver driver) {
+		this.currentPage = new po.login.pages.LoginContainerPage(driver);
+	}
 
 	// BOOTSTRAP POINT
 	public ClassUnderTest() {

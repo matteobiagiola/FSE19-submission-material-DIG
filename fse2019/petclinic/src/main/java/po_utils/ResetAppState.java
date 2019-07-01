@@ -11,8 +11,18 @@ import java.util.Optional;
 
 public class ResetAppState {
 
+    public static void reset(WebDriver driver){
+        resetDB("root","root","petclinic");
+        driver.get("http://localhost:" + MyProperties.getInstance().getProperty("appPort"));
+    }
+
     public static void reset(){
         resetDB("root","root","petclinic");
+    }
+
+    // needed for code-coverage
+    public static void quitDriver(WebDriver driver){
+        driver.quit();
     }
 
     private static void resetDB(String username, String password, String dbName){

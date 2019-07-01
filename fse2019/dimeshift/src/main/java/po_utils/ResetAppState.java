@@ -14,9 +14,25 @@ public class ResetAppState {
         reset();
     }
 
+    public static void reset(WebDriver driver){
+        List<String> tables = Arrays.asList("wallets","wallet_accesses","users","transactions","plans","plan_wallets","authentications");
+        resetDB("root","root","walletjs", tables);
+        clearCookies(driver);
+        driver.get("http://localhost:" + Integer.valueOf(MyProperties.getInstance().getProperty("appPort")));
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void reset(){
         List<String> tables = Arrays.asList("wallets","wallet_accesses","users","transactions","plans","plan_wallets","authentications");
         resetDB("root","root","walletjs",tables);
+    }
+
+    public static void quitDriver(WebDriver driver) {
+        driver.quit();
     }
 
     public static void resetClient(WebDriver driver) {

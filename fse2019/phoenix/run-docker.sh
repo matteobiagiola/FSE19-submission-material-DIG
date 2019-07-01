@@ -8,14 +8,16 @@ usage() {
   echo " -d PORT [5432], assigns database binding port to localhost. Must be a number!!"
   echo " -p yes|no [no], run docker for production or not"
   echo " -n STRING [default], assigns a name to the running container (mandatory for production usage)"
+  echo " -z yes|no, running js code coverage instrumentation"
 }
 
 PORT_APP=4000
 PORT_DB=5432
 PRODUCTION=no
 CONTAINER_NAME=default
+CODE_COVERAGE_INSTRUMENTATION=no
 
-while getopts 'ha:d:p:n:' arg
+while getopts 'ha:d:p:n:z:' arg
     do
         case ${arg} in
 	    h) 
@@ -30,6 +32,8 @@ while getopts 'ha:d:p:n:' arg
 		PRODUCTION=${OPTARG};;
 	    n)
 		CONTAINER_NAME=${OPTARG};;
+		z)
+		CODE_COVERAGE_INSTRUMENTATION=${OPTARG};;
 	    \?)
 		echo "Invalid option: -$OPTARG. See usage below."
 		usage
@@ -51,13 +55,23 @@ if [[ $PRODUCTION == "yes"  ]]; then
 	if [[ $CONTAINER_NAME == "default" ]]; then
 		echo "Assigns a name to the running container for production usage!!"
 		exit 1
-	fi	
-	docker run -it --workdir=/home/phoenix-trello --name=$CONTAINER_NAME --expose 4000 --expose 5432 -p $PORT_APP:4000 -p $PORT_DB:5432 --env PATH=/root/.kiex/elixirs/elixir-1.3.1/bin:/root/.kiex/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -d --entrypoint ./run-services-docker.sh dockercontainervm/phoenix-trello:latest bash
-	# docker exec --workdir=/home/phoenix-trello -d --env PATH=/root/.kiex/elixirs/elixir-1.3.1/bin:/root/.kiex/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin $CONTAINER_NAME /bin/bash ./run-services-docker.sh
+	fi
+	if [[ $CODE_COVERAGE_INSTRUMENTATION == "yes" ]]; then
+	    docker run -it --workdir=/home/phoenix-trello --name=$CONTAINER_NAME --expose 4000 --expose 5432 -p $PORT_APP:4000 \
+	    -p $PORT_DB:5432 --env PATH=/root/.kiex/elixirs/elixir-1.3.1/bin:/root/.kiex/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+	    -d --entrypoint ./run-code-instrumentation.sh dockercontainervm/phoenix-trello:latest bash
+    else
+        docker run -it --workdir=/home/phoenix-trello --name=$CONTAINER_NAME --expose 4000 --expose 5432 -p $PORT_APP:4000 \
+	    -p $PORT_DB:5432 --env PATH=/root/.kiex/elixirs/elixir-1.3.1/bin:/root/.kiex/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+	    -d --entrypoint ./run-services-docker.sh dockercontainervm/phoenix-trello:latest bash
+	fi
+
 else
 	if [[ $CONTAINER_NAME != "default" ]]; then
-		docker run -it --workdir=/home/phoenix-trello --name=$CONTAINER_NAME --expose 4000 --expose 5432 -p $PORT_APP:4000 -p $PORT_DB:5432 dockercontainervm/phoenix-trello:latest bash
+		docker run -it --workdir=/home/phoenix-trello --name=$CONTAINER_NAME --expose 4000 --expose 5432 \
+		    -p $PORT_APP:4000 -p $PORT_DB:5432 dockercontainervm/phoenix-trello:latest bash
 	else
-		docker run -it --workdir=/home/phoenix-trello --expose 4000 --expose 5432 -p $PORT_APP:4000 -p $PORT_DB:5432 dockercontainervm/phoenix-trello:latest bash		
+		docker run -it --workdir=/home/phoenix-trello --expose 4000 --expose 5432 -p $PORT_APP:4000 \
+		    -p $PORT_DB:5432 dockercontainervm/phoenix-trello:latest bash
 	fi
 fi

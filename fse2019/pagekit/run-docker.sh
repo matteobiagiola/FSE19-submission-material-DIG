@@ -8,14 +8,16 @@ usage() {
   echo " -d PORT [3306], assigns database binding port to localhost. Must be a number!!"
   echo " -p yes|no [no], run docker for production or not"
   echo " -n STRING [default], assigns a name to the running container (mandatory for production usage)"
+  echo " -z yes|no, running js code coverage instrumentation"
 }
 
 PORT_APP=3000
 PORT_DB=3306
 PRODUCTION=no
 CONTAINER_NAME=default
+CODE_COVERAGE_INSTRUMENTATION=no
 
-while getopts 'ha:d:p:n:' arg
+while getopts 'ha:d:p:n:z:' arg
     do
         case ${arg} in
 	    h)
@@ -30,6 +32,8 @@ while getopts 'ha:d:p:n:' arg
 		PRODUCTION=${OPTARG};;
 	    n)
 		CONTAINER_NAME=${OPTARG};;
+		z)
+		CODE_COVERAGE_INSTRUMENTATION=${OPTARG};;
 	    \?)
 		echo "Invalid option: -$OPTARG. See usage below."
 		usage
@@ -52,8 +56,13 @@ if [[ $PRODUCTION == "yes"  ]]; then
 		echo "Assigns a name to the running container for production usage!!"
 		exit 1
 	fi
-	docker run -it --workdir=/var/www/html/pagekit --name=$CONTAINER_NAME --expose 80 --expose 3306 -p $PORT_APP:80 -p $PORT_DB:3306 --entrypoint ./run-services-docker.sh -d dockercontainervm/pagekit:latest bash
-	#docker exec --workdir=/var/www/html/pagekit -d $CONTAINER_NAME ./run-services-docker.sh
+	if [[ $CODE_COVERAGE_INSTRUMENTATION == "yes" ]]; then
+	    docker run -it --workdir=/var/www/html/pagekit --name=$CONTAINER_NAME --expose 80 --expose 3306 \
+	    -p $PORT_APP:80 -p $PORT_DB:3306 --entrypoint ./run-code-instrumentation.sh -d dockercontainervm/pagekit:latest bash
+    else
+        docker run -it --workdir=/var/www/html/pagekit --name=$CONTAINER_NAME --expose 80 --expose 3306 \
+        -p $PORT_APP:80 -p $PORT_DB:3306 --entrypoint ./run-services-docker.sh -d dockercontainervm/pagekit:latest bash
+	fi
 else
 	if [[ $CONTAINER_NAME != "default" ]]; then
 		docker run -it --workdir=/var/www/html/pagekit --name=$CONTAINER_NAME --expose 80 --expose 3306 -p $PORT_APP:80 -p $PORT_DB:3306 dockercontainervm/pagekit:latest bash

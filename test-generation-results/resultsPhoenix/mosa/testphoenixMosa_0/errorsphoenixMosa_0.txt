@@ -1,0 +1,281 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/matteobiagiola/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/matteobiagiola/.m2/repository/org/evosuite/evosuite-master/1.0.4-SNAPSHOT/evosuite-master-1.0.4-SNAPSHOT.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+SLF4J: Class path contains multiple SLF4J bindings.
+[MASTER] 19:32:50.581 [Thread-3] ERROR ExternalProcessHandler - SLF4J: Class path contains multiple SLF4J bindings.
+
+SLF4J: Found binding in [jar:file:/Users/matteobiagiola/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[MASTER] 19:32:50.585 [Thread-3] ERROR ExternalProcessHandler - SLF4J: Found binding in [jar:file:/Users/matteobiagiola/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+
+SLF4J: Found binding in [jar:file:/Users/matteobiagiola/.m2/repository/org/evosuite/evosuite-master/1.0.4-SNAPSHOT/evosuite-master-1.0.4-SNAPSHOT.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+[MASTER] 19:32:50.590 [Thread-3] ERROR ExternalProcessHandler - SLF4J: Found binding in [jar:file:/Users/matteobiagiola/.m2/repository/org/evosuite/evosuite-master/1.0.4-SNAPSHOT/evosuite-master-1.0.4-SNAPSHOT.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+[MASTER] 19:32:50.592 [Thread-3] ERROR ExternalProcessHandler - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+[MASTER] 19:32:55.922 [Thread-3] ERROR ExternalProcessHandler - SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+Jun 28, 2019 5:33:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[MASTER] 19:33:13.895 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:33:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+
+INFO: Detected dialect: OSS
+[MASTER] 19:33:13.896 [Thread-3] ERROR ExternalProcessHandler - INFO: Detected dialect: OSS
+
+Jun 28, 2019 5:33:20 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:33:20.292 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:33:20 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="board add-new"]
+[MASTER] 19:33:20.293 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="board add-new"]
+
+
+[MASTER] 19:33:20.293 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:33:20.293 [Thread-3] ERROR ExternalProcessHandler - 
+
+Exception in thread "Thread-3" java.lang.ClassCastException: org.evosuite.testcase.TestChromosome cannot be cast to org.evosuite.testsuite.TestSuiteChromosome
+[MASTER] 19:33:23.442 [Thread-3] ERROR ExternalProcessHandler - Exception in thread "Thread-3" java.lang.ClassCastException: org.evosuite.testcase.TestChromosome cannot be cast to org.evosuite.testsuite.TestSuiteChromosome
+
+	at org.evosuite.statistics.SearchStatistics.currentIndividual(SearchStatistics.java:181)
+[MASTER] 19:33:23.444 [Thread-3] ERROR ExternalProcessHandler - 	at org.evosuite.statistics.SearchStatistics.currentIndividual(SearchStatistics.java:181)
+
+	at org.evosuite.rmi.service.MasterNodeImpl.evosuite_collectStatistics(MasterNodeImpl.java:166)
+[MASTER] 19:33:23.445 [Thread-3] ERROR ExternalProcessHandler - 	at org.evosuite.rmi.service.MasterNodeImpl.evosuite_collectStatistics(MasterNodeImpl.java:166)
+
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[MASTER] 19:33:23.446 [Thread-3] ERROR ExternalProcessHandler - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[MASTER] 19:33:23.447 [Thread-3] ERROR ExternalProcessHandler - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[MASTER] 19:33:23.448 [Thread-3] ERROR ExternalProcessHandler - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+	at java.lang.reflect.Method.invoke(Method.java:498)
+[MASTER] 19:33:23.448 [Thread-3] ERROR ExternalProcessHandler - 	at java.lang.reflect.Method.invoke(Method.java:498)
+
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:324)
+[MASTER] 19:33:23.449 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:324)
+
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+[MASTER] 19:33:23.449 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+[MASTER] 19:33:23.450 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+
+	at java.security.AccessController.doPrivileged(Native Method)
+[MASTER] 19:33:23.451 [Thread-3] ERROR ExternalProcessHandler - 	at java.security.AccessController.doPrivileged(Native Method)
+
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+[MASTER] 19:33:23.451 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+[MASTER] 19:33:23.452 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)
+
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+[MASTER] 19:33:23.453 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)
+
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+[MASTER] 19:33:23.454 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)
+
+	at java.security.AccessController.doPrivileged(Native Method)
+[MASTER] 19:33:23.455 [Thread-3] ERROR ExternalProcessHandler - 	at java.security.AccessController.doPrivileged(Native Method)
+
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+[MASTER] 19:33:23.456 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)
+
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[MASTER] 19:33:23.457 [Thread-3] ERROR ExternalProcessHandler - 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[MASTER] 19:33:23.458 [Thread-3] ERROR ExternalProcessHandler - 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+
+	at java.lang.Thread.run(Thread.java:745)
+[MASTER] 19:33:23.458 [Thread-3] ERROR ExternalProcessHandler - 	at java.lang.Thread.run(Thread.java:745)
+
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:276)
+[MASTER] 19:33:23.459 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:276)
+
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:253)
+[MASTER] 19:33:23.460 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:253)
+
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
+[MASTER] 19:33:23.460 [Thread-3] ERROR ExternalProcessHandler - 	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:162)
+
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227)
+[MASTER] 19:33:23.461 [Thread-3] ERROR ExternalProcessHandler - 	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:227)
+
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179)
+[MASTER] 19:33:23.462 [Thread-3] ERROR ExternalProcessHandler - 	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:179)
+
+	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+[MASTER] 19:33:23.463 [Thread-3] ERROR ExternalProcessHandler - 	at com.sun.proxy.$Proxy7.evosuite_collectStatistics(Unknown Source)
+
+	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:237)
+[MASTER] 19:33:23.463 [Thread-3] ERROR ExternalProcessHandler - 	at org.evosuite.rmi.service.ClientNodeImpl.updateStatistics(ClientNodeImpl.java:237)
+
+	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:75)
+[MASTER] 19:33:23.464 [Thread-3] ERROR ExternalProcessHandler - 	at org.evosuite.statistics.StatisticsSender.sendIndividualToMaster(StatisticsSender.java:75)
+
+	at org.evosuite.statistics.StatisticsListener$1.run(StatisticsListener.java:71)
+[MASTER] 19:33:23.465 [Thread-3] ERROR ExternalProcessHandler - 	at org.evosuite.statistics.StatisticsListener$1.run(StatisticsListener.java:71)
+
+Jun 28, 2019 5:33:27 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:33:27.168 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:33:27 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:33:27.169 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:33:27.169 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:33:27.169 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:33:41 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:33:41.105 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:33:41 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:33:41.107 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:33:41.107 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:33:41.107 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:33:53 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:33:53.278 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:33:53 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:33:53.280 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:33:53.280 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:33:53.280 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:11 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:11.249 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:11 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:11.251 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:11.252 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:11.252 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:16 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:16.198 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:16 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:16.199 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:16.199 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:16.199 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:23 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:23.623 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:23 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:23.626 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:23.626 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:23.626 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:26 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:26.860 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:26 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:26.861 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:26.861 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:26.861 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:29 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:29.346 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:29 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:29.347 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:29.347 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:29.347 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:34 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:34.167 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:34 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:34.169 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:34.169 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:34.169 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:37 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:37.605 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:37 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:37.607 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:37.607 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:37.607 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:47 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:47.897 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:47 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:47.899 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:47.900 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:47.900 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:50 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:50.842 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:50 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:50.843 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:50.844 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:50.844 [Thread-3] ERROR ExternalProcessHandler - 
+
+Jun 28, 2019 5:34:55 PM po_utils.PageObjectLogging logInfo
+[MASTER] 19:34:55.262 [Thread-3] ERROR ExternalProcessHandler - Jun 28, 2019 5:34:55 PM po_utils.PageObjectLogging logInfo
+
+INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+[MASTER] 19:34:55.263 [Thread-3] ERROR ExternalProcessHandler - INFO: waitForElementBeingPresentOnPage timeout exception: unable to locate the element By.xpath: //div[@class="error"]
+
+
+[MASTER] 19:34:55.263 [Thread-3] ERROR ExternalProcessHandler - 
+
+
+[MASTER] 19:34:55.264 [Thread-3] ERROR ExternalProcessHandler - 
+

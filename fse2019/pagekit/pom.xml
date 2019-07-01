@@ -24,6 +24,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>6.0.5</version>
         </dependency>
+
+        <dependency>
+            <groupId>code-coverage</groupId>
+            <artifactId>code-coverage</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

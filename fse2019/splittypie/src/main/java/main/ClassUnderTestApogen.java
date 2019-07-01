@@ -12,6 +12,10 @@ public class ClassUnderTestApogen {
 	private Object currentPage = null;
 	private WebDriver driver;
 
+	public ClassUnderTestApogen(WebDriver driver) {
+		this.currentPage = new po_apogen.IndexPage(driver);
+	}
+
 	// BOOTSTRAP POINT
 	public ClassUnderTestApogen() {
 		// start driver and browser

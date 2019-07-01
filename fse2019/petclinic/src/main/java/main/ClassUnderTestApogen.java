@@ -6,10 +6,16 @@ import custom_classes.*;
 
 import po_utils.NotInTheRightPageObjectException;
 import po_utils.NotTheRightInputValuesException;
+import po_utils.ResetAppState;
 
 public class ClassUnderTestApogen {
 
 	private Object currentPage = null;
+
+	public ClassUnderTestApogen(WebDriver driver) {
+		ResetAppState.reset(driver);
+		this.currentPage = new po_apogen.IndexPage(driver);
+	}
 
 	// BOOTSTRAP POINT
 	public ClassUnderTestApogen() {
