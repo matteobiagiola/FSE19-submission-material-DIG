@@ -1,4 +1,4 @@
-test-generation-results/*.txt
+test-generation-results/**/*.txt
 node_modules
 package-lock.json
 *.log
