@@ -1,15 +1,15 @@
 #!/bin/bash
 
-./run-exp.sh petclinic ~/workspace/results/resultsPetclinic/mosa petclinicMosa \
+./run-exp.sh petclinic ~/workspace/test-generation-results/resultsPetclinic/mosa petclinicMosa \
 	3006 3312 9521 ~/workspace/fse2019/petclinic 7005
 
-#./run-exp.sh petclinic ~/workspace/results/resultsPetclinic/mosa petclinicMosa \
+#./run-exp.sh petclinic ~/workspace/test-generation-results/resultsPetclinic/mosa petclinicMosa \
 #	3006 3312 9521 ~/workspace/fse2019/petclinic 7005 &
 #sleep 10
-#./run-exp.sh petclinic ~/workspace/results/resultsPetclinic/adaptive-sequence petclinicAdaptiveSequence \
+#./run-exp.sh petclinic ~/workspace/test-generation-results/resultsPetclinic/adaptive-sequence petclinicAdaptiveSequence \
 #	3007 3313 9522 ~/workspace/fse2019/petclinic 7006 &
 #sleep 10
-#./run-exp.sh petclinic ~/workspace/results/resultsPetclinic/adaptive-complete petclinicAdaptiveComplete \
+#./run-exp.sh petclinic ~/workspace/test-generation-results/resultsPetclinic/adaptive-complete petclinicAdaptiveComplete \
 #	3008 3314 9523 ~/workspace/fse2019/petclinic 7007 &
 
 fail=0

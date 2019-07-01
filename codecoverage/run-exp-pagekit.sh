@@ -1,15 +1,15 @@
 #!/bin/bash
 
-./run-exp.sh pagekit ~/workspace/results/resultsPagekit/mosa pagekitMosa \
+./run-exp.sh pagekit ~/workspace/test-generation-results/resultsPagekit/mosa pagekitMosa \
 	3003 3309 9518 ~/workspace/fse2019/pagekit 7002
 
-#./run-exp.sh pagekit ~/workspace/results/resultsPagekit/mosa pagekitMosa \
+#./run-exp.sh pagekit ~/workspace/test-generation-results/resultsPagekit/mosa pagekitMosa \
 #	3003 3309 9518 ~/workspace/fse2018/pagekit 7002 &
 #sleep 10
-#./run-exp.sh pagekit ~/workspace/results/resultsPagekit/adaptive-sequence pagekitAdaptiveSequence \
+#./run-exp.sh pagekit ~/workspace/test-generation-results/resultsPagekit/adaptive-sequence pagekitAdaptiveSequence \
 #	3004 3310 9519 ~/workspace/fse2018/pagekit 7003 &
 #sleep 10
-#./run-exp.sh pagekit ~/workspace/results/resultsPagekit/adaptive-complete pagekitAdaptiveComplete \
+#./run-exp.sh pagekit ~/workspace/test-generation-results/resultsPagekit/adaptive-complete pagekitAdaptiveComplete \
 #	3005 3311 9520 ~/workspace/fse2018/pagekit 7004 &
 
 fail=0

@@ -1,15 +1,15 @@
 #!/bin/bash
 
-./run-exp.sh retroboard ~/workspace/results/resultsRetroboard/mosa retroboardMosa \
+./run-exp.sh retroboard ~/workspace/test-generation-results/resultsRetroboard/mosa retroboardMosa \
 	4003 0 9527 ~/workspace/fse2019/retroboard 7011
 
-#./run-exp.sh retroboard ~/workspace/results/resultsRetroboard/mosa retroboardMosa \
+#./run-exp.sh retroboard ~/workspace/test-generation-results/resultsRetroboard/mosa retroboardMosa \
 #	4003 0 9527 ~/workspace/fse2019/retroboard 7011 &
 #sleep 10
-#./run-exp.sh retroboard ~/workspace/results/resultsRetroboard/adaptive-sequence retroboardAdaptiveSequence \
+#./run-exp.sh retroboard ~/workspace/test-generation-results/resultsRetroboard/adaptive-sequence retroboardAdaptiveSequence \
 #	4004 0 9528 ~/workspace/fse2019/retroboard 7012 &
 #sleep 10
-#./run-exp.sh retroboard ~/workspace/results/resultsRetroboard/adaptive-complete retroboardAdaptiveComplete \
+#./run-exp.sh retroboard ~/workspace/test-generation-results/resultsRetroboard/adaptive-complete retroboardAdaptiveComplete \
 #	4005 0 9529 ~/workspace/fse2019/retroboard 7013 &
 
 fail=0
