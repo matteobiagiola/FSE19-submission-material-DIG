@@ -108,3 +108,7 @@ Name: Lines Percentage: 25.6% Fraction: 708/2766
 ```
 
 The [`istanbul`](https://github.com/gotwarlost/istanbul) tool used to measure coverage, reports statement, branch, function and line coverage.
+
+## 4. Data
+
+The results of the experiments for all the application subjects are available at [this link](https://drive.google.com/file/d/1pWTYVyLwzZ7xyJvSCZ77GpV07t4o-V35/view?usp=sharing).
