@@ -3,7 +3,7 @@ This repository contains the tool implementing the approach described in an ESEC
 
 ## 1. Automatic Setup
 
-A virtual machine running Ubuntu server 18.04 is available for download at https://drive.google.com/file/d/1Op2oLQfELkCWGVJ5zrKS5GT1NwqZ96xA/view?usp=sharing. The virtual machine contains this repository and all the dependencies needed to run DIG on the web application subjects. 
+A virtual machine running Ubuntu server 18.04 is available for download [here](https://drive.switch.ch/index.php/s/ndtnMiuA3FypW5q/download). The virtual machine contains this repository and all the dependencies needed to run DIG on the web application subjects. 
 
 The virtual machine was created with VirtualBox and was exported in the `.ova` format, a platform-independent distribution format for virtual machines. It can be imported by any virtualization software although it was tested only on VirtualBox. Instructions on how to import an `.ova` format virtual machine in VirtualBox and VMWare Fusion are listed below:
 
